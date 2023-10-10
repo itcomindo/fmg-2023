@@ -1,0 +1,11 @@
+#jp {
+  margin-top: 0.25rem;
+  background: linear-gradient(
+    to bottom,
+    var(--color-red-dark),
+    var(--color-red-darkest)
+  );
+  color: var(--color-light-1);
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
