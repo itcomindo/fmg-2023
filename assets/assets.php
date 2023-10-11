@@ -57,7 +57,7 @@ function mm_enqueue_styles()
 			wp_enqueue_style('mm-page-style', get_template_directory_uri() . '/assets/css/single.min.css', array(), mm_theme_version(), 'all');
 		}
 	}
-	if (is_front_page()) {
+	if (is_front_page() || is_home()) {
 		if (mm_is_devmode()) {
 			wp_enqueue_style('mm-page-style', get_template_directory_uri() . '/assets/css/front-page.css', array(), mm_theme_version(), 'all');
 		} else {

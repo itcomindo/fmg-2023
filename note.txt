@@ -8,3 +8,8 @@ let currentText = 0;
     }
 
     setInterval(rotateText, 2000);
+
+
+
+
+    <img src="<?php echo IMAGES_DIR . 'fmg.webp' ?>" alt="Video Fajarmerah Group">

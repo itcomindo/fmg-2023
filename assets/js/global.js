@@ -1,29 +1,95 @@
 window.addEventListener('DOMContentLoaded', (event) => {
-
     /**
     =========================
     * Vanilla js start from here
     *=========================
     */
-
-
-
-
-
+    let currentText = 0;
+    const texts = document.querySelectorAll('.rotating-text');
+    function rotateText() {
+        texts[currentText].classList.add('hide');
+        currentText = (currentText + 1) % texts.length;
+        texts[currentText].classList.remove('hide');
+    }
+    setInterval(rotateText, 2000);
     /*=========================Vanilla js end above this=========================*/
-
     jQuery(function () {
-
         /*=========================jQuery start below this line=========================*/
-
-
-
+        /**
+        =========================
+        * Conditional script Start
+        *=========================
+        */
+        var $body = jQuery('body'); // Cache pemilih untuk efisiensi
+        if ($body.hasClass('page-template-photo-gallery-page')) {
+            mm_photo_gallery();
+        } else if ($body.hasClass('page-template-landing-video-page')) {
+            mm_video_modal();
+        }
+        /*=========================Conditional script end=========================*/
+        /**
+        =========================
+        * Photo Gallery
+        *=========================
+        */
+        function mm_photo_gallery() {
+            jQuery('.img-item').on('click', function () {
+                var imgSrc = jQuery(this).find('img').attr('src');
+                jQuery('body').append('<div class="modal"><div class="modal-content"><span class="modal-close">&times;</span><img src="' + imgSrc + '"></div></div>');
+                jQuery('.modal').fadeIn();
+                jQuery('body').addClass('no-scroll');
+            });
+            // Menutup modal saat mengklik tombol close.
+            jQuery(document).on('click', '.modal-close', function () {
+                jQuery('body').removeClass('no-scroll');
+                jQuery('.modal').fadeOut(function () {
+                    jQuery(this).remove();
+                });
+            });
+            // Menutup modal saat mengklik di luar modal-content.
+            jQuery(document).on('click', '.modal', function (e) {
+                jQuery('body').removeClass('no-scroll');
+                if (jQuery(e.target).hasClass('modal')) {
+                    jQuery('.modal').fadeOut(function () {
+                        jQuery(this).remove();
+                    });
+                }
+            });
+        }
+        /**
+        =========================
+        * Video Modal
+        *=========================
+        */
+        function mm_video_modal() {
+            jQuery(".video-item").on("click", function (e) {
+                e.preventDefault(); // Hentikan aksi default
+                var videoSrc = jQuery(this).data("video"); // Ambil URL video
+                jQuery(".video-modal-iframe").attr("src", videoSrc + "?autoplay=1&enablejsapi=1"); // Tambahkan parameter autoplay dan enablejsapi
+                jQuery(".video-modal").fadeIn(); // Tampilkan modal
+                jQuery('body').addClass('no-scroll'); // Tambahkan class no-scroll pada body untuk mencegah scroll saat modal muncul.
+            });
+            // Fungsi saat tombol close di modal diklik.
+            jQuery(".video-modal-close").on("click", function () {
+                jQuery('body').removeClass('no-scroll'); // Hapus class no-scroll pada body untuk mengaktifkan scroll kembali.
+                jQuery(".video-modal").fadeOut(function () {
+                    jQuery(".video-modal-iframe").attr("src", ""); // Hapus URL video untuk menghentikan pemutaran setelah modal hilang
+                });
+            });
+            // Jika area luar modal diklik, tutup modal (opsional).
+            jQuery(".video-modal").on("click", function (e) {
+                jQuery('body').removeClass('no-scroll'); // Hapus class no-scroll pada body untuk mengaktifkan scroll kembali.
+                if (e.target !== this) return; // Pastikan hanya bereaksi saat bagian luar diklik
+                jQuery(".video-modal").fadeOut(function () {
+                    jQuery(".video-modal-iframe").attr("src", ""); // Hapus URL video untuk menghentikan pemutaran setelah modal hilang
+                });
+            });
+        }
+        /*=========================Video Modal End=========================*/
         jQuery('.waform-trigger').click(function () {
             mm_call_waform();
             jQuery('#fwa').slideUp();
         });
-
-
         function mm_call_waform() {
             jQuery('#waform').addClass('show');
             jQuery('#waform-desc').slideUp();
@@ -36,17 +102,14 @@ window.addEventListener('DOMContentLoaded', (event) => {
                 jQuery('#waform-cancel').slideUp();
                 jQuery('#waform-desc').slideDown();
                 jQuery('#waform-head').slideUp();
-                //focus on input #nama.
                 jQuery('#nama').focus();
             });
-
             //cancel sending waform.
             jQuery('#waform-cancel').click(function () {
                 jQuery('#waform').removeClass('show');
                 jQuery('body').removeClass('no-scroll');
                 jQuery('#fwa').slideDown();
             });
-
             //close whatsapp form.
             jQuery('#waform-close').click(function () {
                 jQuery('#waform-desc').slideUp();
@@ -54,9 +117,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
                 jQuery('#waform-item-wr').slideUp();
                 jQuery('#waform-option-elements-wr').slideDown();
                 jQuery('#waform-cancel').slideDown();
-                // jQuery('body').removeClass('no-scroll');.
             });
-
             mm_whatsapp_form();
         }
         /**
@@ -64,7 +125,6 @@ window.addEventListener('DOMContentLoaded', (event) => {
         * Sending Waform
         *=========================
         */
-
         function mm_whatsapp_form() {
             // Menonaktifkan tombol waform-submit saat awal halaman dimuat.
             jQuery("#waform-submit").prop("disabled", true);
@@ -78,10 +138,8 @@ window.addEventListener('DOMContentLoaded', (event) => {
             // Logika untuk menampilkan info lowongan berdasarkan pilihan select tanpa harus mengisi form lainnya.
             jQuery("#keperluan").on("change", function () {
                 var keperluan = jQuery(this).val();
-
                 // Sembunyikan kedua pesan saat opsi berubah.
                 jQuery('#loker-yes, #loker-no').slideUp();
-
                 if (keperluan === "Lowongan Kerja") {
                     if (adaLoker === "yes") {
                         jQuery('#loker-yes').slideDown();
@@ -90,12 +148,10 @@ window.addEventListener('DOMContentLoaded', (event) => {
                     }
                 }
             });
-
             jQuery("#nama, #keperluan, #isipesan").on("input change", function () {
                 var nama = jQuery("#nama").val().trim();
                 var keperluan = jQuery("#keperluan").val();
                 var isipesan = jQuery("#isipesan").val().replace(/ /g, '%20');
-
                 // Jika semua elemen telah diisi.
                 if (nama && keperluan && isipesan) {
                     if (keperluan !== "Lowongan Kerja" || (keperluan === "Lowongan Kerja" && adaLoker === "yes")) {
@@ -114,24 +170,10 @@ window.addEventListener('DOMContentLoaded', (event) => {
                 }
             });
         }
-
-
-
-
-
-
-
-
-
-
-
         /**
         =========================
         * jQuery end above this line
         *=========================
         */
-
     });
-
-
 });
