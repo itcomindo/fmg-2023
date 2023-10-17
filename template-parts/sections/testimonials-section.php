@@ -17,7 +17,7 @@ defined('ABSPATH') || exit;
         <div id="testi-wr">
             <div id="testi-top">
                 <h2 class="section-head-medium">Testimonials</h2>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nobis in a asperiores non? Odio, quae quibusdam? Animi, fugiat! Modi alias vel cum enim laudantium suscipit illo aliquid dolores harum quisquam.</p>
+                <p>Fajarmerah Group senantiasa untuk terus dan secara konsisten meningkatkan performa para staff serta berinovasi untuk memberikan pelayanan yang sesuai dengan eksptektasi para customer kami.</p>
             </div>
 
             <div id="testi-bot">
@@ -29,14 +29,24 @@ defined('ABSPATH') || exit;
                         foreach ($testimonials as $testimonial) {
                             $name = $testimonial['testi_name'];
                             $logo = $testimonial['testi_logo'];
+                            if ($logo) {
+                                $logo = $testimonial['testi_logo'];
+                            } else {
+                                $logo = $testimonial['testi_logo'];
+                                $pria = $testimonial['testi_pria'];
+                                if ($pria) {
+                                    $logo = get_template_directory_uri() . '/assets/images/user.webp';
+                                } else {
+                                    $logo = get_template_directory_uri() . '/assets/images/female-user.webp';
+                                }
+                            }
+                            $testi_content = $testimonial['testi_content'];
                     ?>
                             <div class="testi-item">
                                 <div class="testi-logo-wr"><img class="testi-logo" src="<?php echo esc_html($logo); ?>" alt="<?php echo esc_html($name); ?>" title="<?php echo esc_html($name) ?>"></div>
                                 <span class="testi-author"><?php echo esc_html($name); ?></span>
                                 <div class="testi-content-wr">
-                                    <blockquote class="testi-content">
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Id aspernatur amet temporibus provident modi voluptates minus veritatis numquam similique. Porro, hic reiciendis nisi commodi et esse consequuntur minima provident enim.
-                                    </blockquote>
+                                    <blockquote class="testi-content"><?php echo esc_html($testi_content); ?></blockquote>
                                 </div>
                             </div>
                     <?php

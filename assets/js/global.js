@@ -25,6 +25,8 @@ window.addEventListener('DOMContentLoaded', (event) => {
             mm_photo_gallery();
         } else if ($body.hasClass('page-template-landing-video-page')) {
             mm_video_modal();
+        } else if ($body.hasClass('home')) {
+            mm_flickity_testimonial();
         }
         /*=========================Conditional script end=========================*/
         /**
@@ -56,6 +58,28 @@ window.addEventListener('DOMContentLoaded', (event) => {
                 }
             });
         }
+
+
+        /**
+        =========================
+        * Testomonial slider flickity
+        *=========================
+        */
+        function mm_flickity_testimonial() {
+            jQuery('#testi-item-wr').flickity({
+                // options
+                cellAlign: 'left',
+                contain: true,
+                wrapAround: true,
+                autoPlay: true,
+            });
+        }
+
+
+
+
+
+
         /**
         =========================
         * Video Modal
@@ -159,7 +183,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
                 if (nama && keperluan && isipesan) {
                     if (keperluan !== "Lowongan Kerja" || (keperluan === "Lowongan Kerja" && adaLoker === "yes")) {
                         jQuery("#waform-submit").prop("disabled", false);
-                        keperluan = "*" + keperluan + "*"; // Tambahkan tanda * pada awal dan akhir keperluan untuk membuat teks bold
+                        keperluan = "*" + keperluan + "*";
                         var whatsappURL = "//api.whatsapp.com/send?phone=<?php mm_the_phone('whatsapp'); ?>&text=Hallo, " + nama + ", ingin informasi tentang " + keperluan + " " + isipesan + ". Terimakasih 🙏";
                         jQuery("#waform-submit a").attr("href", whatsappURL);
                         jQuery('#btn-msg').addClass('show');

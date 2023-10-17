@@ -8,11 +8,14 @@
  * @since 019
  */
 
+$bgimg = get_template_directory_uri() . '/assets/images/mobil-patroli.webp';
+
+
 defined('ABSPATH') || exit;
 
 ?>
 
-<section id="hero" class="section">
+<section id="hero" class="section" style="background: url(<?php echo $bgimg; ?>); background-size: cover; background-position: center; background-repeat: no-repeat; background-attachment: fixed;">
 	<div class="container">
 		<div id="hero-wr">
 			<div id="hero-left" class="hero-col">

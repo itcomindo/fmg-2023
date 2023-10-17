@@ -44,7 +44,7 @@ function mm_wa_form()
             <div id="waform-item-wr" <?php echo $loker; ?>>
                 <div id="waform-close">Close</div>
                 <!-- nama -->
-                <div class="waform-item">
+                <div id="kotak-isi-nama" class="waform-item">
                     <label class="waform-label" for="nama">Nama<span class="red">*</span></label>
                     <input class="waform-element" type="nama" id="nama">
                 </div>
@@ -65,11 +65,11 @@ function mm_wa_form()
                     <span id="loker-yes" style="display:none;">Jelaskan pendidikan dan lokasi Anda sekarang 🙏</span>
                     <span id="loker-no" style="display:none;">Maaf belum ada lowongan kerja 🙏</span>
                 </div>
-                <div class="waform-item">
+                <div id="kotak-isi-pesan" class="waform-item">
                     <label for="isipesan">Tuliskan Pesan:<span class="red">*</span></label>
                     <textarea name="isipesan" id="isipesan" cols="30" rows="5"></textarea>
                 </div>
-                <div class="waform-item">
+                <div id="tombol-kirim-pesan" class="waform-item">
                     <small id="btn-msg" class="accent-1">Silahkan Tekan tombol chat 🙏</small>
                     <button id="waform-submit"><a href="//api.whatsapp.com/send?phone=<?php mm_the_phone('whatsapp'); ?>"><i class="fab fa-telegram"></i> Mulai Chat</a></button>
                 </div>

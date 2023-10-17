@@ -84,6 +84,9 @@ function theme_options_mn()
 				Field::make('complex', 'testimonials', 'Testimonials')
 					->set_layout('tabbed-horizontal')
 					->add_fields([
+						Field::make('checkbox', 'testi_pria', 'Pria')
+							->set_option_value('yes')
+							->set_default_value(true),
 						Field::make('image', 'testi_logo', 'Logo')
 							->set_value_type('url'),
 						Field::make('text', 'testi_name', 'Nama'),

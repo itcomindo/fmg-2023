@@ -3,7 +3,7 @@
 * Theme Name: Fajarmerah Group
 * Theme URI: https://fajarmerahgroup.com
 * Description: Fajarmerah Group
-* Version: 1.0
+* Version: 3
 *=========================
 */
 
@@ -489,7 +489,6 @@ h2#logo-header {
 */
 #hero {
   height: calc(75vh - 180px + 10rem);
-  background: url("/fmg/wp-content/themes/fajarmerah-group/assets/images/mobil-patroli.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -1895,12 +1894,10 @@ table#cln tbody td {
 }
 #testi-item-wr {
   width: 100%;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1rem;
 }
 .testi-item {
-  width: 100%;
+  width: calc(100% / 4 - 1rem);
+  margin: 0 0.5rem;
   display: grid;
   gap: 1rem;
   padding: 2rem 1rem;
@@ -2038,6 +2035,9 @@ blockquote.testi-content {
   }
   .foobot {
     grid-template-columns: 1fr;
+  }
+  .testi-item {
+    width: calc(100% / 3 - 1rem);
   }
 }
 
@@ -2209,6 +2209,9 @@ blockquote.testi-content {
   #rekanan-item-wr {
     grid-template-columns: repeat(5, 1fr);
   }
+  .testi-item {
+    width: calc(100% / 2 - 1rem);
+  }
 }
 
 /**
@@ -2281,6 +2284,9 @@ blockquote.testi-content {
 @media screen and (max-width: 395px) {
   #rekanan-item-wr {
     grid-template-columns: repeat(3, 1fr);
+  }
+  .testi-item {
+    width: calc(100% - 1rem);
   }
 }
 

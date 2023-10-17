@@ -24,6 +24,7 @@ function mm_theme_version()
 }
 
 require get_template_directory() . '/assets/images/images.php';
+require get_template_directory() . '/assets/videos/video.php';
 
 
 /**
@@ -58,6 +59,8 @@ function mm_enqueue_styles()
 		}
 	}
 	if (is_front_page() || is_home()) {
+		//load flickity css.
+		wp_enqueue_style('mm-flickity-css', 'https://unpkg.com/flickity@2/dist/flickity.min.css', array(), '2.2.2', 'all');
 		if (mm_is_devmode()) {
 			wp_enqueue_style('mm-page-style', get_template_directory_uri() . '/assets/css/front-page.css', array(), mm_theme_version(), 'all');
 		} else {
@@ -82,7 +85,7 @@ function mm_load_scripts()
 	wp_enqueue_script('mm-jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js', array(), '3.7.1', true);
 	if (is_front_page()) {
 		//enqueue flickity js.
-		wp_enqueue_script('mm-flickity-js', 'https://cdnjs.cloudflare.com/ajax/libs/flickity/2.2.2/flickity.pkgd.min.js', array(), '2.2.2', true);
+		wp_enqueue_script('mm-flickity-js', 'https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js', array(), '2.2.2', true);
 	}
 	if (mm_is_devmode()) {
 		wp_enqueue_script('mm-global-js', get_template_directory_uri() . '/assets/js/global.js', array(), mm_theme_version(), true);

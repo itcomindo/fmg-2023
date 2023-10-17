@@ -13,3 +13,13 @@ let currentText = 0;
 
 
     <img src="<?php echo IMAGES_DIR . 'fmg.webp' ?>" alt="Video Fajarmerah Group">
+
+
+
+
+
+
+
+    <video autoplay muted playsinline loop>
+                    <source src="<?php echo esc_url(MM_VIDEO_DIR . 'pelatihan.mp4'); ?>" type="video/mp4">
+                </video>
