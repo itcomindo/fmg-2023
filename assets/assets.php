@@ -79,8 +79,11 @@ function mm_load_scripts()
 {
 	// dequeue jquery.
 	wp_deregister_script('jquery');
-	wp_enqueue_script('mm-jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js', array(), '3.7.0', true);
-	wp_enqueue_script('mm-infinite-scroll-js', 'https://cdnjs.cloudflare.com/ajax/libs/jquery-infinitescroll/4.0.0/infinite-scroll.pkgd.min.js', array(), '4.0.0', true);
+	wp_enqueue_script('mm-jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js', array(), '3.7.1', true);
+	if (is_front_page()) {
+		//enqueue flickity js.
+		wp_enqueue_script('mm-flickity-js', 'https://cdnjs.cloudflare.com/ajax/libs/flickity/2.2.2/flickity.pkgd.min.js', array(), '2.2.2', true);
+	}
 	if (mm_is_devmode()) {
 		wp_enqueue_script('mm-global-js', get_template_directory_uri() . '/assets/js/global.js', array(), mm_theme_version(), true);
 	} else {

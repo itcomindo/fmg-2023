@@ -25,7 +25,6 @@ function mm_pelatihan_fields()
 {
     Container::make('post_meta', 'Pelatihan')
         ->where('post_type', '=', 'page')
-        // post template is pelatihan-page
         ->where('post_template', '=', 'pelatihan-page.php')
         ->add_fields([
             Field::make('date', 'tanggal_mulai', 'Tanggal Mulai Pelatihan')
@@ -71,7 +70,7 @@ function mm_translate_bulan($bulan)
         'December' => 'Desember'
     ];
 
-    // Cek apakah nama bulan dalam bahasa Inggris ada di array, jika ya, kembalikan nama bulannya dalam bahasa Indonesia
+    // Cek apakah nama bulan dalam bahasa Inggris ada di array, jika ya, kembalikan nama bulannya dalam bahasa Indonesia.
     return isset($months[$bulan]) ? $months[$bulan] : $bulan;
 }
 
@@ -86,14 +85,14 @@ function mm_tanggal_mulai()
 {
     $tanggal = carbon_get_the_post_meta('tanggal_mulai'); // Misal output: 10-January-2023
 
-    // Pisahkan tanggal berdasarkan tanda "-" untuk mendapatkan nama bulannya
+    // Pisahkan tanggal berdasarkan tanda "-" untuk mendapatkan nama bulannya.
     $parts = explode('-', $tanggal);
     $bulan = $parts[1];
 
-    // Terjemahkan nama bulannya
+    // Terjemahkan nama bulannya.
     $bulan_indonesia = mm_translate_bulan($bulan);
 
-    // Gabungkan kembali tanggalnya
+    // Gabungkan kembali tanggalnya.
     $tanggal_indonesia = $parts[0] . '-' . $bulan_indonesia . '-' . $parts[2];
 
     return $tanggal_indonesia; // Hasil: 10-Januari-2023
@@ -111,14 +110,14 @@ function mm_tanggal_akhir()
 {
     $tanggal = carbon_get_the_post_meta('tanggal_akhir'); // Misal output: 10-January-2023
 
-    // Pisahkan tanggal berdasarkan tanda "-" untuk mendapatkan nama bulannya
+    // Pisahkan tanggal berdasarkan tanda "-" untuk mendapatkan nama bulannya.
     $parts = explode('-', $tanggal);
     $bulan = $parts[1];
 
-    // Terjemahkan nama bulannya
+    // Terjemahkan nama bulannya.
     $bulan_indonesia = mm_translate_bulan($bulan);
 
-    // Gabungkan kembali tanggalnya
+    // Gabungkan kembali tanggalnya.
     $tanggal_indonesia = $parts[0] . '-' . $bulan_indonesia . '-' . $parts[2];
 
     return $tanggal_indonesia; // Hasil: 10-Januari-2023

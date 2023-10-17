@@ -76,3 +76,11 @@ defined('ABSPATH') || exit;
         </div>
     </div>
 </footer>
+
+<div id="cp" class="section">
+    <div class="container">
+        <div id="cp-wr">
+            <span>Web Design by Budiharyono.com</span>
+        </div>
+    </div>
+</div>

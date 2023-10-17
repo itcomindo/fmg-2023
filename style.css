@@ -438,6 +438,7 @@ h2#logo-header {
     var(--color-dark-1),
     var(--color-dark-3)
   );
+  z-index: 5;
 }
 #header-menu a {
   color: var(--color-light-1);
@@ -488,13 +489,23 @@ h2#logo-header {
 */
 #hero {
   height: calc(75vh - 180px + 10rem);
-  background: linear-gradient(
-    45deg,
-    var(--color-red-light),
-    var(--color-red-darkest)
-  );
+  background: url("/fmg/wp-content/themes/fajarmerah-group/assets/images/mobil-patroli.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   border-bottom: 6px solid silver;
   color: var(--color-light-1);
+  background-attachment: fixed;
+}
+
+#hero:after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: var(--transparent-dark-6);
 }
 
 #hero:before {
@@ -511,13 +522,14 @@ h2#logo-header {
       rgba(0, 0, 0, 0.1) 50%,
       rgba(0, 0, 0, 0.3) 100%
     ),
-    linear-gradient(
-      to right,
-      rgba(0, 0, 0, 0.1) 0%,
-      rgba(0, 0, 0, 0.1) 50%,
-      transparent 50%,
-      transparent 100%
-    );
+    1
+      linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0.1) 0%,
+        rgba(0, 0, 0, 0.1) 50%,
+        transparent 50%,
+        transparent 100%
+      );
   background-size: 2px 2px;
 
   /* Vendor prefixes */
@@ -549,9 +561,6 @@ h2#logo-header {
 #hero-wr {
   width: 100%;
   height: 100%;
-  display: grid;
-  grid-template-columns: 1fr 500px;
-  align-items: center;
 }
 #hero-left {
   width: 100%;
@@ -560,6 +569,11 @@ h2#logo-header {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
+  text-align: left;
+  top: -3rem;
+}
+#hero-head {
+  text-align: left;
 }
 #hero-left p {
   line-height: 1.3;
@@ -570,6 +584,20 @@ h2#logo-header {
   font-family: var(--font-display);
   letter-spacing: 3px;
   font-size: 1.3rem;
+  background-color: var(--color-red-dark);
+  line-height: 1.3;
+  margin: 0;
+  clip-path: polygon(10% 0, 100% 0%, 90% 100%, 0% 100%);
+  padding: 4px 3rem;
+  text-align: left;
+}
+p.hero-head-text-two {
+  background-color: var(--color-accent-1);
+  color: var(--color-dark-3);
+  line-height: 1.3;
+  margin: 0;
+  padding: 4px 1rem;
+  border-radius: 5px;
 }
 
 #hero-right {
@@ -998,6 +1026,68 @@ a.btn-style-one:hover:after {
 
 /**
 =========================
+* CTA Section
+* @todo cta section
+*=========================
+*/
+#cta {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  background-color: var(--color-red-dark);
+  color: var(--color-light-1);
+}
+#cta .container {
+  padding-top: 7rem;
+}
+
+#cta-wr {
+  padding-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+#cta-item-wr {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: center;
+  gap: 1rem;
+}
+.cta-item {
+  padding: 3rem 1rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px dashed var(--transparent-light-1);
+}
+
+/*=========================
+* CTA Shape Divider
+* @todo cta shape divider
+=========================*/
+.custom-shape-divider-top-1697101897 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.custom-shape-divider-top-1697101897 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 150px;
+}
+
+.custom-shape-divider-top-1697101897 .shape-fill {
+  fill: #ffffff;
+}
+
+/**
+=========================
 * Rekanan Section
 * @todo rekanan section
 *=========================
@@ -1005,6 +1095,9 @@ a.btn-style-one:hover:after {
 #rekanan {
   padding-top: 5rem;
   padding-bottom: 5rem;
+}
+#rekanan .container {
+  padding-top: 7rem;
 }
 #rekanan-item-wr {
   display: grid;
@@ -1215,6 +1308,71 @@ span.ab-logo {
   bottom: 8rem;
   mix-blend-mode: multiply;
 }
+
+/**
+=========================
+* About Page
+* @todo about page
+*=========================
+*/
+#abu {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.page-template-about-page #services div,
+.page-template-about-page #services p,
+.page-template-about-page #services h2,
+.page-template-about-page #services i,
+.page-template-about-page #services h3,
+.page-template-about-page #services h4 {
+  color: var(--color-light-1);
+}
+.page-template-about-page ul {
+  color: var(--color-light-1);
+}
+.page-template-about-page ul li:nth-child(odd),
+.page-template-about-page ul li:nth-child(even) {
+  background-color: unset;
+}
+.page-template-about-page #services {
+  background-color: var(--color-red-dark);
+  color: var(--color-light-1);
+}
+.page-template-about-page #service-top {
+  position: relative;
+  z-index: 2;
+  width: 768px;
+  max-width: 100%;
+  height: 10rem;
+  margin: 0 auto;
+  border: none;
+  width: 100%;
+  background-color: unset;
+}
+
+/**
+=========================
+* Copyrigth Section
+* @todo copyrigth section
+*=========================
+*/
+#cp {
+  height: 40px;
+  background-color: var(--color-red-darkest);
+  color: var(--color-light-1);
+}
+#cp .container {
+  height: 100%;
+}
+#cp-wr {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
 /**
 =========================
 * Video Gallery Page
@@ -1336,7 +1494,7 @@ iframe.video-modal-iframe {
 */
 #gal {
   padding-top: 3rem;
-  padding-bottom: 3rem;
+  padding-bottom: 7rem;
 }
 #gal-wr {
   display: grid;
@@ -1348,6 +1506,7 @@ iframe.video-modal-iframe {
   aspect-ratio: 1/1;
   border: 1px solid var(--transparent-dark-1);
   box-shadow: 0 0 5px 0 var(--transparent-dark-1);
+  cursor: pointer;
 }
 
 .img-item img {
@@ -1589,6 +1748,189 @@ ul.vertical .colist-item {
 
 /**
 =========================
+* Single Post
+* @todo single post
+*=========================
+*/
+#single {
+  padding-top: 3rem;
+  padding-bottom: 7rem;
+}
+
+/**
+=========================
+* Archive Page
+* @todo archive page
+*=========================
+*/
+
+#arc {
+  padding-top: 3rem;
+  padding-bottom: 7rem;
+}
+#arc-wr {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+.arc-item {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--transparent-dark-1);
+  background: linear-gradient(
+    to bottom,
+    var(--color-red-dark),
+    var(--color-red-darkest)
+  );
+  color: var(--color-light-1);
+  border-radius: 10px;
+  box-shadow: 0 0 1rem 0 var(--transparent-dark-2);
+}
+.arc-item-top {
+  width: 100%;
+  aspect-ratio: 16/9;
+  padding: 1rem;
+}
+.arc-item-top a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.arc-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.arc-item-bot {
+  padding: 2rem 1rem;
+}
+
+/**
+=========================
+* Clients Table
+* @todo clients table
+*=========================
+*/
+#client {
+  padding-top: 3rem;
+  padding-bottom: 7rem;
+}
+#client-wr {
+  width: 100%;
+  overflow-x: auto;
+}
+
+table#cln {
+  width: 100%;
+  background: linear-gradient(
+    to bottom,
+    var(--color-red-dark),
+    var(--color-red-darkest)
+  );
+  color: white;
+  padding: 0;
+  font-size: 14px;
+}
+table#cln thead {
+  background-color: var(--color-dark-2);
+  color: var(--color-accent-1);
+  padding: 1rem;
+  font-weight: 700;
+  font-size: 1rem;
+}
+table#cln tbody td {
+  padding: 4px 1rem;
+  border-bottom: 1px dashed var(--transparent-light-1);
+}
+
+/**
+=========================
+* Shape Divider
+* @todo shape divider
+*=========================
+*/
+.custom-shape-divider-top-1697101228 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.custom-shape-divider-top-1697101228 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 150px;
+  transform: rotateY(180deg);
+}
+
+.custom-shape-divider-top-1697101228 .shape-fill {
+  fill: #e6e6e6;
+}
+
+/**
+=========================
+* Testimonial
+* @todo testimonial
+*=========================
+*/
+
+#testi {
+  padding-top: 5rem;
+  padding-bottom: 7rem;
+}
+#testi-wr {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+#testi-top,
+#testi-bot {
+  width: 100%;
+}
+#testi-item-wr {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+.testi-item {
+  width: 100%;
+  display: grid;
+  gap: 1rem;
+  padding: 2rem 1rem;
+  border: 1px solid var(--transparent-dark-1);
+  border-radius: 10px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+blockquote.testi-content {
+  padding: 1rem;
+  margin: unset;
+  font-size: 90%;
+  background-color: var(--color-light-2);
+  max-height: 5rem;
+  overflow: auto;
+  border-radius: 10px;
+}
+.testi-logo-wr {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.testi-logo {
+  width: 80px;
+}
+/**
+=========================
 * Media Query
 * @todo media query
 *=========================
@@ -1781,9 +2123,6 @@ ul.vertical .colist-item {
     padding-right: 0;
     padding-left: 0;
   }
-  #hero-wr {
-    grid-template-columns: 1fr;
-  }
   #hero-right {
     position: absolute;
     top: 0;
@@ -1809,12 +2148,16 @@ ul.vertical .colist-item {
     z-index: 2;
     padding-left: 1rem;
     padding-right: 1rem;
-    align-items: center;
-    text-align: center;
   }
   #hero-img-wr {
     clip-path: none;
     right: unset;
+  }
+  .hero-text-one {
+    clip-path: none;
+    background-color: unset;
+    text-align: left;
+    padding: unset;
   }
 
   #services-card-wr {
@@ -1826,6 +2169,9 @@ ul.vertical .colist-item {
   #gal-wr,
   #video-item-wr {
     grid-template-columns: repeat(2, 1fr);
+  }
+  table#cln thead {
+    font-size: 0.8rem;
   }
 }
 
@@ -1871,11 +2217,11 @@ ul.vertical .colist-item {
 * @todo 601px
 *=========================
 */
-/* @media screen and (max-width: 600px) {
-  .arleft {
-    top: 16rem;
+@media screen and (max-width: 600px) {
+  #cta-item-wr {
+    grid-template-columns: 1fr;
   }
-} */
+}
 
 /**
 =========================

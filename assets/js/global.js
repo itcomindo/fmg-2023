@@ -95,6 +95,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
             jQuery('#waform-desc').slideUp();
             jQuery('#waform-item-wr').slideUp();
             jQuery('body').addClass('no-scroll');
+            jQuery('#waform-option-elements-wr').addClass('animate__fadeInUp');
             //open chat form.
             jQuery('#open-chat').click(function () {
                 jQuery('#waform-option-elements-wr').slideUp();
@@ -109,6 +110,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
                 jQuery('#waform').removeClass('show');
                 jQuery('body').removeClass('no-scroll');
                 jQuery('#fwa').slideDown();
+                jQuery('#waform-option-elements-wr').removeClass('animate__fadeInUp');
             });
             //close whatsapp form.
             jQuery('#waform-close').click(function () {
@@ -117,6 +119,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
                 jQuery('#waform-item-wr').slideUp();
                 jQuery('#waform-option-elements-wr').slideDown();
                 jQuery('#waform-cancel').slideDown();
+                jQuery('#waform-option-elements-wr').removeClass('animate__fadeInUp');
             });
             mm_whatsapp_form();
         }

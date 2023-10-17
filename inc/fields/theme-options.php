@@ -78,6 +78,18 @@ function theme_options_mn()
 						)
 					),
 
+				Field::make('separator', 'testi_sep', 'Testimonials')
+					->set_classes('separator-custom'),
+
+				Field::make('complex', 'testimonials', 'Testimonials')
+					->set_layout('tabbed-horizontal')
+					->add_fields([
+						Field::make('image', 'testi_logo', 'Logo')
+							->set_value_type('url'),
+						Field::make('text', 'testi_name', 'Nama'),
+						Field::make('textarea', 'testi_content', 'Isi Testimonial')
+					]),
+
 			)
 		);
 
@@ -302,10 +314,10 @@ function mm_the_phone($what)
 {
 	$phone = esc_html(carbon_get_theme_option('hp_comp_mn'));
 
-	// Menghilangkan karakter non-angka
+	// Menghilangkan karakter non-angka.
 	$phone = preg_replace('/\D/', '', $phone);
 
-	// Memastikan nomor telepon dimulai dengan '62'
+	// Memastikan nomor telepon dimulai dengan '62'.
 	if (substr($phone, 0, 1) === '0') {
 		$phone = '62' . substr($phone, 1);
 	} elseif (substr($phone, 0, 1) !== '6') {

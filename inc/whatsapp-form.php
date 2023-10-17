@@ -35,7 +35,7 @@ function mm_wa_form()
                     <h3 id="waform-head">Contact Us</h3>
                     <span id="waform-desc">Isi form dibawah ini sebelum memulai chat dengan kami 👌.</span>
                 </div>
-                <div id="waform-option-elements-wr">
+                <div id="waform-option-elements-wr" class="animate__animated">
                     <div id="open-chat" class="waform-cta-element"><i class="fab fa-whatsapp"></i> Chat</div>
                     <a id="ctacall" class="waform-link waform-cta-element" rel="noopener" target="_blank" href="tel:<?php mm_the_phone('phone') ?>"><i class="fas fa-phone"></i> Call</a>
                     <a id="ctaemail" class="waform-link waform-cta-element" rel="noopener" target="_blank" href="mailto:<?php email_comp_mn(); ?>"><i class="far fa-envelope"></i> Email</a>
@@ -84,8 +84,8 @@ add_action('wp_footer', 'mm_wa_form');
 add_action('wp_footer', function () {
     $pass = array('span', 'img');
 ?>
-    <div id="fwa" class="waform-trigger">
-        <div id="before-open" class="fwa-greeting"><?php mm_greeting(); ?> 🙏 Silahkan tekan disini untuk menghubungi kami 👌.</div>
+    <div id="fwa" class="waform-trigger animate__animated animate__backInUp">
+        <div id="before-open" class="fwa-greeting animate__animated animate__rubberBand animate__delay-1s"><?php mm_greeting(); ?> 🙏 Silahkan tekan disini untuk menghubungi kami 👌.</div>
         <div id="fwa-wr">
             <img src="<?php echo IMAGES_DIR . '/logo-150x150-transparant.png' ?>" alt="PT. Fajarmerah Group">
         </div>
