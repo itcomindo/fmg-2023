@@ -43,7 +43,7 @@ defined('ABSPATH') || exit;
                             $testi_content = $testimonial['testi_content'];
                     ?>
                             <div class="testi-item">
-                                <div class="testi-logo-wr"><img class="testi-logo" src="<?php echo esc_html($logo); ?>" alt="<?php echo esc_html($name); ?>" title="<?php echo esc_html($name) ?>"></div>
+
                                 <span class="testi-author"><?php echo esc_html($name); ?></span>
                                 <div class="testi-content-wr">
                                     <blockquote class="testi-content"><?php echo esc_html($testi_content); ?></blockquote>

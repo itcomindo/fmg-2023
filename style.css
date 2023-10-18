@@ -2035,7 +2035,8 @@ blockquote.testi-content {
   overflow: hidden;
 }
 .testi-logo {
-  width: 80px;
+  width: 80px !important;
+  height: auto !important;
 }
 
 /**

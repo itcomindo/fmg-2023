@@ -28,7 +28,7 @@ defined('ABSPATH') || exit;
             </div>
             <div id="about-right" class="w100">
                 <div class="arleft">
-                    <img id="mancall" src="<?php echo STANDING_OFFICER; ?>" alt="Jasa Satpam">
+                    <img width="434" height="418" id="mancall" src="<?php echo STANDING_OFFICER; ?>" alt="Jasa Satpam">
                     <span class="ab-logo"><img src="<?php echo LOGO_32; ?>" alt="PT. Fajarmerah Indo Service" title="PT. Fajarmerah Indo Service" width="32" height="32"></span>
                 </div>
                 <div class="arright">

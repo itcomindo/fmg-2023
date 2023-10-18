@@ -23,3 +23,10 @@ let currentText = 0;
     <video autoplay muted playsinline loop>
                     <source src="<?php echo esc_url(MM_VIDEO_DIR . 'pelatihan.mp4'); ?>" type="video/mp4">
                 </video>
+
+
+
+
+
+
+                <div class="testi-logo-wr"><img class="testi-logo" src="<?php echo esc_html($logo); ?>" alt="<?php echo esc_html($name); ?>" title="<?php echo esc_html($name) ?>"></div>
