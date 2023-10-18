@@ -18,7 +18,7 @@ get_header();
     <div class="container">
         <div id="jp-wr">
             <?php the_title('<h1>', '</h1>'); ?>
-            <p>Fajaermerah Group menyediakan <?php the_title(); ?> di Indonesia. Perusahaan kami adalah perusahaan legal, bersertifikat dan terdaftar di Indonesia. Kami menyediakan <?php the_title(); ?> untuk semua jenis bisnis. Kami memiliki pengalaman lebih dari 10 tahun dalam bidang <?php the_title(); ?>. Kami memiliki tim profesional yang siap membantu Anda.</p>
+            <p>Fajarmerah Group menyediakan <?php the_title(); ?> di Indonesia. Perusahaan kami adalah perusahaan legal, bersertifikat dan terdaftar di Indonesia. Kami menyediakan <?php the_title(); ?> untuk semua jenis bisnis. Kami memiliki pengalaman lebih dari 10 tahun dalam bidang <?php the_title(); ?>. Kami memiliki tim profesional yang siap membantu Anda.</p>
 
             <p>Fajarmerah Group didukung oleh sumber daya manusia yang handal dan berkualitas. Beratitude baik, berpendidikan, memiliki skill, siap kerja, loyal dan berdedikasi tinggi dan konsisten. Perusahaan ini juga dikelola secara profesional oleh orang-orang yang sangat berkompeten dibidang ketenagakerjaan.</p>
 

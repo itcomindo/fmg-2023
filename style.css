@@ -3,7 +3,7 @@
 * Theme Name: Fajarmerah Group
 * Theme URI: https://fajarmerahgroup.com
 * Description: Fajarmerah Group
-* Version: 3
+* Version: 4
 *=========================
 */
 
@@ -366,6 +366,7 @@ a.linkedin {
   align-items: center;
   justify-content: center;
   border-radius: 0 0 50px 50px;
+  cursor: pointer;
 }
 #stmenu-trigger img {
   width: 100%;
@@ -969,6 +970,7 @@ p.hero-head-text-two {
   border-right: unset;
   border-left: unset;
   width: 100%;
+  height: unset !important;
 }
 
 #service-top {
@@ -1352,7 +1354,7 @@ a.btn-style-one:hover:after {
 
 .arright {
   position: absolute;
-  right: 0;
+  right: 1rem;
   bottom: 0;
   display: flex;
   flex-direction: column;
@@ -1452,7 +1454,7 @@ span.ab-logo {
   z-index: 2;
   width: 768px;
   max-width: 100%;
-  height: 10rem;
+  height: unset !important;
   margin: 0 auto;
   border: none;
   width: 100%;
@@ -2070,6 +2072,8 @@ blockquote.testi-content {
   top: 25%;
   left: 50%;
   width: 316px;
+  height: 640px;
+  overflow: auto;
   background-color: var(--color-dark-1);
   color: var(--color-light-1);
   z-index: 8888;

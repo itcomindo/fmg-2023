@@ -279,4 +279,5 @@ add_filter('feed_links_show_comments_feed', '__return_false');
 
 
 require_once get_template_directory() . '/inc/inc.php';
-require get_template_directory() . '/assets/assets.php';
+require_once get_template_directory() . '/assets/assets.php';
+require_once get_template_directory() . '/plugins/plugins.php';
