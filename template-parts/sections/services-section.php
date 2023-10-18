@@ -18,7 +18,7 @@ defined('ABSPATH') || exit;
             <div id="service-top" class="os-top">
                 <div class="os-top-logo-wr">
                     <div class="single-logo">
-                        <img width="60" height="60" class="logo" src="https://fajarmerahgroup.com/wp-content/themes/fmg/images/fmg-60.webp" alt="PT. Fajarmerah Indo Service" title="PT. Fajarmerah Indo Service">
+                        <img width="60" height="60" class="logo" src="<?php echo LOGO; ?>" alt="PT. Fajarmerah Indo Service" title="PT. Fajarmerah Indo Service">
                     </div>
                 </div>
                 <h2 class="ostop-head section-head-medium red">Our Services</h2>

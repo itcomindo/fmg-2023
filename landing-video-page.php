@@ -34,7 +34,7 @@ $videos = array(
             ?>
                 <div class="video-item" data-video="<?php echo esc_html($video); ?>">
                     <div class="video-iframe-wr">
-                        <img src="<?php echo IMAGES_DIR . 'front-pict.webp' ?>" alt="Video Fajarmerah Group">
+                        <img src="<?php echo LOGO; ?>" alt="Video Fajarmerah Group">
                         <div class="video-title-wr">
                             <h3 class="video-title">Video Aktivitas Fajarmerah Group</h3>
                         </div>

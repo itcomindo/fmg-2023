@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Images
  *
@@ -7,7 +8,8 @@
  * @since 019
  */
 
-defined( 'ABSPATH' ) || exit;
+defined('ABSPATH') || exit;
 
 
-define( 'IMAGES_DIR', get_template_directory_uri() . '/assets/images/' );
+define('IMAGES_DIR', get_template_directory_uri() . '/assets/images/');
+define('LOGO', IMAGES_DIR . 'fmg.webp');

@@ -18,7 +18,7 @@ defined('ABSPATH') || exit;
 	<div class="container">
 		<div id="stmenu-wr">
 			<div id="stmenu-trigger">
-				<img src="<?php echo IMAGES_DIR . 'logo-150x150-transparant.png' ?>" alt="Fajarmerah Group" title="Fajarmreah Group">
+				<img src="<?php echo LOGO; ?>" alt="Fajarmerah Group" title="Fajarmreah Group">
 			</div>
 		</div>
 	</div>

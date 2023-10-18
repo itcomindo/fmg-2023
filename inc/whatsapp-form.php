@@ -87,7 +87,7 @@ add_action('wp_footer', function () {
     <div id="fwa" class="waform-trigger animate__animated animate__backInUp">
         <div id="before-open" class="fwa-greeting animate__animated animate__rubberBand animate__delay-1s"><?php mm_greeting(); ?> 🙏 Silahkan tekan disini untuk menghubungi kami 👌.</div>
         <div id="fwa-wr">
-            <img src="<?php echo IMAGES_DIR . '/logo-150x150-transparant.png' ?>" alt="PT. Fajarmerah Group">
+            <img src="<?php echo LOGO; ?>" alt="PT. Fajarmerah Group">
         </div>
     </div>
 <?php

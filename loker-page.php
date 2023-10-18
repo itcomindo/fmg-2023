@@ -35,7 +35,7 @@ if ($query->have_posts()) {
         <div class="loker-item">
             <?php mm_loker_date('tanggal'); ?>
             <div class="loker-item-top">
-                <img src="<?php echo IMAGES_DIR . 'logo-150x150-transparant.png'; ?>" alt="Logo Fajarmerah Group">
+                <img src="<?php echo LOGO; ?>" alt="Logo Fajarmerah Group">
             </div>
             <div class="loker-item-bot">
                 <h3><?php the_title(); ?></h3>
