@@ -69,9 +69,9 @@ function mm_wa_form()
                     <label for="isipesan">Tuliskan Pesan:<span class="red">*</span></label>
                     <textarea name="isipesan" id="isipesan" cols="30" rows="5"></textarea>
                 </div>
-                <div id="tombol-kirim-pesan" class="waform-item">
+                <div id="tombol-kirim-pesan" class="waform-item" data-whatsapp="//api.whatsapp.com/send?phone=<?php mm_the_phone('whatsapp'); ?>">
                     <small id="btn-msg" class="accent-1">Silahkan Tekan tombol chat 🙏</small>
-                    <button id="waform-submit"><a href="//api.whatsapp.com/send?phone=<?php mm_the_phone('whatsapp'); ?>"><i class="fab fa-telegram"></i> Mulai Chat</a></button>
+                    <button id="waform-submit"><a href="#"><i class="fab fa-telegram"></i> Mulai Chat</a></button>
                 </div>
             </div>
         </div>

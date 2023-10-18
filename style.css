@@ -336,6 +336,7 @@ a.linkedin {
   font-family: var(--font-display);
   text-transform: uppercase;
   font-size: 1.2rem;
+  z-index: 5;
 }
 #header .container {
   height: 100%;
@@ -462,7 +463,10 @@ h2#logo-header {
   align-items: center;
   list-style: none;
   padding: 0;
-  overflow: auto;
+  overflow: hidden;
+}
+#header-menu-list.show {
+  overflow: visible;
 }
 .header-menu-item {
   display: flex;
@@ -478,6 +482,52 @@ h2#logo-header {
 }
 .header-menu-item a {
   width: max-content;
+  display: flex;
+}
+
+#header-menu-list .menu-item-has-children {
+  position: relative;
+  overflow: visible;
+}
+#header-menu-list .sub-menu {
+  position: absolute;
+  top: calc(100% + 0.5rem);
+  left: 0;
+  width: max-content;
+  background-color: var(--color-dark-1);
+  padding: 0.5rem;
+  z-index: 999;
+  flex-direction: column;
+  box-sizing: border-box;
+  transform: translateY(calc(-100% - 0.5rem));
+  z-index: -1;
+  opacity: 0;
+  display: none;
+  transition: all 0.3s ease-in-out;
+}
+
+#header-menu-list .sub-menu.show {
+  display: flex;
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 0.3s ease-in-out;
+}
+
+#header-menu-list .sub-menu li {
+  box-sizing: border-box;
+  margin-bottom: 3px;
+  display: flex;
+  padding: 4px 8px 4px 4px;
+  font-size: 90%;
+  width: 100% !important;
+  border-bottom: 1px dashed var(--transparent-light-2);
+}
+#header-menu-list .sub-menu li:last-child {
+  border-bottom: unset;
+}
+#header-menu-list .sub-menu li a {
+  width: 100%;
   display: flex;
 }
 
@@ -2233,6 +2283,9 @@ blockquote.testi-content {
 *=========================
 */
 @media screen and (max-width: 481px) {
+  ul.sub-menu.show {
+    left: -2rem !important;
+  }
   #gal-wr,
   #video-item-wr {
     grid-template-columns: 1fr;
@@ -2282,6 +2335,9 @@ blockquote.testi-content {
 *=========================
 */
 @media screen and (max-width: 395px) {
+  ul.sub-menu.show {
+    left: -5rem !important;
+  }
   #rekanan-item-wr {
     grid-template-columns: repeat(3, 1fr);
   }
@@ -2309,6 +2365,9 @@ blockquote.testi-content {
 *=========================
 */
 @media (max-width: 321px) {
+  ul.sub-menu.show {
+    left: -7rem !important;
+  }
   #tb-right {
     display: none;
   }

@@ -176,6 +176,8 @@ window.addEventListener('DOMContentLoaded', (event) => {
                 }
             });
             jQuery("#nama, #keperluan, #isipesan").on("input change", function () {
+                var nomorWhatsapp = jQuery("#tombol-kirim-pesan").attr('data-whatsapp');
+                console.log(nomorWhatsapp);
                 var nama = jQuery("#nama").val().trim();
                 var keperluan = jQuery("#keperluan").val();
                 var isipesan = jQuery("#isipesan").val().replace(/ /g, '%20');
@@ -184,7 +186,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
                     if (keperluan !== "Lowongan Kerja" || (keperluan === "Lowongan Kerja" && adaLoker === "yes")) {
                         jQuery("#waform-submit").prop("disabled", false);
                         keperluan = "*" + keperluan + "*";
-                        var whatsappURL = "//api.whatsapp.com/send?phone=<?php mm_the_phone('whatsapp'); ?>&text=Hallo, " + nama + ", ingin informasi tentang " + keperluan + " " + isipesan + ". Terimakasih 🙏";
+                        var whatsappURL = nomorWhatsapp + '&text=Hallo, ' + nama + ', ingin informasi tentang ' + keperluan + ' ' + isipesan + '. Terimakasih 🙏';
                         jQuery("#waform-submit a").attr("href", whatsappURL);
                         jQuery('#btn-msg').addClass('show');
                     } else {
@@ -197,6 +199,64 @@ window.addEventListener('DOMContentLoaded', (event) => {
                 }
             });
         }
+
+
+        /**
+        =========================
+        * Submenu
+        *=========================
+        */
+        jQuery('.menu-item-has-children').on('click', function (e) {
+            var $submenu = jQuery(this).find('.sub-menu');
+
+            // Cek apakah submenu sedang terbuka
+            if (!$submenu.hasClass('show')) {
+                // Sembunyikan semua submenu yang lain
+                jQuery('.sub-menu.show').fadeOut(500).removeClass('show');
+                // Tampilkan submenu yang diklik
+                $submenu.stop(true, true).delay(200).fadeIn(500).addClass('show');
+                jQuery('#header-menu-list').addClass('show');
+            } else {
+                // Jika submenu sudah terbuka, sembunyikan
+                $submenu.stop(true, true).delay(200).fadeOut(500).removeClass('show');
+                jQuery('#header-menu-list').removeClass('show');
+            }
+
+            // Jangan hentikan event click jika submenu ada
+            if ($submenu.length === 0) {
+                e.preventDefault();
+            }
+        });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         /**
         =========================
         * jQuery end above this line
