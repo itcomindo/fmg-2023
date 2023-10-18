@@ -19,7 +19,7 @@ defined('ABSPATH') || exit;
         <!-- pop menu logo wr -->
         <div id="popmenu-logo-wr" class="popmenu-row">
             <a href="<?php get_bloginfo()->url; ?>">
-                <img width="60" height="60" src="<?php echo LOGO; ?>" alt="Logo Fajarmerah Group" title="Fajarmerah Group">
+                <img width="60" height="60" src="<?php echo LOGO_60; ?>" alt="Logo Fajarmerah Group" title="Fajarmerah Group">
             </a>
         </div>
         <!-- pop menu top -->

@@ -250,7 +250,6 @@ window.addEventListener('DOMContentLoaded', (event) => {
             });
             jQuery("#nama, #keperluan, #isipesan").on("input change", function () {
                 var nomorWhatsapp = jQuery("#tombol-kirim-pesan").attr('data-whatsapp');
-                console.log(nomorWhatsapp);
                 var nama = jQuery("#nama").val().trim();
                 var keperluan = jQuery("#keperluan").val();
                 var isipesan = jQuery("#isipesan").val().replace(/ /g, '%20');
@@ -259,7 +258,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
                     if (keperluan !== "Lowongan Kerja" || (keperluan === "Lowongan Kerja" && adaLoker === "yes")) {
                         jQuery("#waform-submit").prop("disabled", false);
                         keperluan = "*" + keperluan + "*";
-                        var whatsappURL = nomorWhatsapp + '&text=Hallo, ' + nama + ', ingin informasi tentang ' + keperluan + ' ' + isipesan + '. Terimakasih 🙏';
+                        var whatsappURL = nomorWhatsapp + '&text=Hallo,%20Nama%20Saya%20' + nama + ',%20saya%20ingin%20informasi%20tentang%20' + keperluan + ' ' + isipesan + '. Terimakasih%20🙏';
                         jQuery("#waform-submit a").attr("href", whatsappURL);
                         jQuery('#btn-msg').addClass('show');
                     } else {

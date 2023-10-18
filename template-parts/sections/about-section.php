@@ -28,8 +28,8 @@ defined('ABSPATH') || exit;
             </div>
             <div id="about-right" class="w100">
                 <div class="arleft">
-                    <img id="mancall" src="https://fajarmerahgroup.com/wp-content/themes/fmg/images/jasa-satpam-fmg.webp" alt="Jasa Satpam">
-                    <span class="ab-logo"><img src="https://fajarmerahgroup.com/wp-content/themes/fmg/images/fmg-32.webp" alt="PT. Fajarmerah Indo Service" title="PT. Fajarmerah Indo Service" width="32" height="32"></span>
+                    <img id="mancall" src="<?php echo STANDING_OFFICER; ?>" alt="Jasa Satpam">
+                    <span class="ab-logo"><img src="<?php echo LOGO_32; ?>" alt="PT. Fajarmerah Indo Service" title="PT. Fajarmerah Indo Service" width="32" height="32"></span>
                 </div>
                 <div class="arright">
                     <ul>

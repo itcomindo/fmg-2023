@@ -23,7 +23,7 @@ get_template_part('inc/popup-menu');
         <div class="footop">
             <div class="footop-inner">
 
-                <span class="logo-80"><img src="https://fajarmerahgroup.com/wp-content/themes/fmg/images/fmg-80.webp" alt="PT. Fajarmerah Indo Service" title="PT. Fajarmerah Indo Service" width="80" height="80"></span>
+                <span class="logo-80"><img src="<?php echo LOGO_80; ?>" alt="PT. Fajarmerah Indo Service" title="PT. Fajarmerah Indo Service" width="80" height="80"></span>
             </div>
             <!-- logo_dynamic_mn('class-str', 'width-int'); -->
         </div>
@@ -37,7 +37,7 @@ get_template_part('inc/popup-menu');
                 <h2 class="foothead">Kantor Pusat</h2>
                 <ul class="vertical">
                     <li class="colist-item">
-                        <span class="colist-left"><img width="16" height="16" src="https://fajarmerahgroup.com/wp-content/themes/fmg/images/fmg-16.webp" alt="PT. Fajarmerah Indo Service Security" title="PT. Fajarmerah Indo Service Security"></span>
+                        <span class="colist-left"><img width="16" height="16" src="<?php echo LOGO_16; ?>" alt="PT. Fajarmerah Indo Service Security" title="PT. Fajarmerah Indo Service Security"></span>
                         <span class="colist-right"><?php nama_comp_mn(); ?></span>
                     </li>
 

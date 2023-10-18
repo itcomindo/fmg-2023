@@ -18,7 +18,7 @@ defined('ABSPATH') || exit;
 	<div class="container">
 		<div id="stmenu-wr">
 			<div id="stmenu-trigger">
-				<img src="<?php echo LOGO; ?>" alt="Fajarmerah Group" title="Fajarmreah Group">
+				<img width="80" height="80" src="<?php echo LOGO_80; ?>" alt="Fajarmerah Group" title="Fajarmreah Group">
 			</div>
 		</div>
 	</div>
@@ -49,7 +49,7 @@ defined('ABSPATH') || exit;
 			</div>
 			<div id="header-mid" class="header-col">
 				<a href="/" title="<?php nama_comp_mn(); ?>">
-					<img src="<?php echo esc_html(IMAGES_DIR . 'fmg.webp'); ?>" alt="<?php nama_comp_mn(); ?>" title="<?php nama_comp_mn(); ?>" width="80" height="80">
+					<img src="<?php echo LOGO_80; ?>" alt="<?php nama_comp_mn(); ?>" title="<?php nama_comp_mn(); ?>" width="80" height="80">
 				</a>
 				<h2 id="logo-header">Fajarmerah Group</h2>
 			</div>
