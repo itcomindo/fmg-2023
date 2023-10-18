@@ -13,6 +13,17 @@ defined('ABSPATH') || exit;
 
 ?>
 
+
+<div id="stmenu" class="section">
+	<div class="container">
+		<div id="stmenu-wr">
+			<div id="stmenu-trigger">
+				<img src="<?php echo IMAGES_DIR . 'logo-150x150-transparant.png' ?>" alt="Fajarmerah Group" title="Fajarmreah Group">
+			</div>
+		</div>
+	</div>
+</div>
+
 <div id="topbar" class="section">
 	<div class="container">
 		<div id="topbar-wr">
@@ -50,6 +61,9 @@ defined('ABSPATH') || exit;
 	<div class="container">
 		<div id="header-menu-wr">
 			<?php mm_header_menu(); ?>
+			<div id="popup-menu-trigger-wr">
+				<i class="fas fa-bars"></i>
+			</div>
 		</div>
 	</div>
 </div>

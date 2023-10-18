@@ -20,9 +20,33 @@ get_header();
             <div id="the-content">
                 <?php the_content(); ?>
             </div>
+            <?php
+            if (mm_get_loker_expired_date()) {
+                if (has_term('Loker', 'category')) {
+            ?>
+                    <div class="lcp-wr">
+                        <div id="lcp-top">
+                            <h3>Informasi lebih lanjut hubungi</h3>
+                            <div id="lcp-item-wr">
+                                <?php loker_contact_person(); ?>
+                            </div>
+                        </div>
+                    </div>
+            <?php
+                }
+            } else {
+                echo '<h2>Lowongan pekerjaan ini sudah ditutup</h2>';
+                echo '<span>Terima kasih atas partisipasinya.</span>';
+            }
+            ?>
         </div>
     </div>
 </section>
 <?php
+
+
+
+
+
 
 get_footer();

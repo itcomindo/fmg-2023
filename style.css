@@ -45,6 +45,7 @@
   /* Fonts */
   --font-primary: "Mulish", sans-serif;
   --font-display: "Rajdhani", sans-serif;
+  --font-writing: "Vibur", cursive;
   /* coloring */
   --color-light-1: #ffffff;
   --color-light-2: #e6e6e6;
@@ -328,6 +329,50 @@ a.linkedin {
 * @todo header
 *=========================
 */
+
+#stmenu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 40px;
+  z-index: 777;
+  background: linear-gradient(
+    to right,
+    var(--color-red-light),
+    var(--color-red-darkest),
+    var(--color-red-light)
+  );
+  transition: 0.3s liner ease-in-out;
+  box-shadow: 0 0 0.5rem var(--transparent-dark-4) inset;
+}
+
+#stmenu .container,
+#stmenu-wr {
+  height: 100%;
+}
+#stmenu-wr {
+  display: flex;
+  justify-content: center;
+}
+
+#stmenu-trigger {
+  width: 80px;
+  position: absolute;
+  padding-top: 1rem;
+  background-color: var(--color-red-darkest);
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0 0 50px 50px;
+}
+#stmenu-trigger img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 #header {
   height: 100px;
   background-color: var(--color-light-3);
@@ -450,12 +495,25 @@ h2#logo-header {
 #header-menu-wr {
   width: 100%;
   height: 100%;
+  display: grid;
+  grid-template-columns: 1fr 50px;
+  align-items: center;
+  color: var(--color-light-1);
+}
+
+#popup-menu-trigger-wr {
   display: flex;
-  flex-direction: column;
+  align-items: center;
   justify-content: center;
+  cursor: pointer;
+  font-size: 25px;
 }
 .menu-menu-utama-container {
   width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 #header-menu-list {
   width: 100%;
@@ -464,6 +522,7 @@ h2#logo-header {
   list-style: none;
   padding: 0;
   overflow: hidden;
+  margin: 0;
 }
 #header-menu-list.show {
   overflow: visible;
@@ -1976,6 +2035,190 @@ blockquote.testi-content {
 .testi-logo {
   width: 80px;
 }
+
+/**
+=========================
+* Popup Menu
+*=========================
+*/
+#popmenu-layer {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: black;
+  z-index: 100;
+  opacity: 0.8;
+}
+#popmenu {
+  position: fixed;
+  top: 25%;
+  left: 50%;
+  width: 316px;
+  background-color: var(--color-dark-1);
+  color: var(--color-light-1);
+  padding-top: 2rem;
+  transform: translate(-50%, -100%);
+  visibility: hidden;
+  z-index: -1;
+  opacity: 0;
+  transition: 0.3s linear all;
+}
+#popmenu.show {
+  position: fixed;
+  top: 25%;
+  left: 50%;
+  width: 316px;
+  background-color: var(--color-dark-1);
+  color: var(--color-light-1);
+  z-index: 8888;
+  transform: translate(-50%, -25%);
+  padding-top: 2rem;
+  opacity: 1;
+  visibility: visible;
+  transition: 0.3s linear all;
+}
+#popmenu-close {
+  position: absolute;
+  top: -2rem;
+  right: 0;
+  width: 30px;
+  height: 30px;
+  background-color: red;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1.3;
+  font-weight: 700;
+  cursor: pointer;
+}
+#popmenu-wr {
+  display: flex;
+  flex-direction: column;
+  border-radius: 7px;
+  align-items: center;
+}
+.popmenu-row {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+#popmenu-logo-wr {
+  width: 80px;
+  margin: 0 auto;
+}
+#popmenu-top {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 1rem;
+}
+
+#popmenu-head {
+  color: var(--color-accent-1);
+}
+#popmenu-alamat {
+  font-size: 75%;
+}
+#popmenu-phone {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 110%;
+  letter-spacing: 1px;
+}
+
+#popmenu-cta-wr {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 0 1rem;
+}
+.popmenu-cta {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px 0;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.popmenu-cta i {
+  margin-right: 8px;
+}
+
+#popmenu-wa-btn {
+  background-color: darkgreen;
+}
+#popmenu-call-btn {
+  background-color: darkred;
+}
+#popmenu-email-btn {
+  background-color: darkblue;
+}
+#popmenu-menu-wr {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: var(--color-red-dark);
+  margin-top: 1rem;
+  padding-top: 1rem;
+}
+
+#popmenu-section-subhead {
+  font-size: 1rem;
+  font-family: var(--font-display);
+  line-height: 1.3;
+  margin: 0 0 0 1rem;
+  text-align: left;
+}
+.menu-popup-menu-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#popup-menu-list {
+  box-sizing: border-box;
+  list-style: none;
+  padding: 0;
+  font-size: 95%;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 0 1rem;
+  font-family: var(--font-display);
+}
+#popup-menu-list li:last-child {
+  border-bottom: unset;
+}
+#popup-menu-list li {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border-bottom: 1px dashed var(--transparent-light-1);
+}
+/* #popup-menu-list .menu-item-has-children {
+  background-color: black;
+} */
+#popup-menu-list .menu-item-has-children .sub-menu {
+  list-style: none;
+  padding: 0;
+  font-size: 13px;
+  margin-top: 4px;
+  margin-bottom: 8px;
+  display: none;
+}
+#popup-menu-list .menu-item-has-children .sub-menu li:last-child {
+  border-bottom: unset;
+}
+
 /**
 =========================
 * Media Query

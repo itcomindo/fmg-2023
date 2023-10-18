@@ -10,6 +10,10 @@
 
 defined('ABSPATH') || exit;
 
+
+get_template_part('inc/popup-menu');
+
+
 ?>
 
 <footer id="footer" class="section">

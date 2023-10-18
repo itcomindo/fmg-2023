@@ -22,10 +22,32 @@ function mm_register_menus()
 {
     register_nav_menus([
         'header-menu' => 'Header Menu',
-        'footer-menu' => 'Footer Menu'
+        'footer-menu' => 'Footer Menu',
+        'popup-menu' => 'Popup Menu'
     ]);
 }
 add_action('init', 'mm_register_menus');
+
+
+
+/**
+ * Function mm_popup_menu
+ *
+ * @package MasmonsTheme
+ * @author Budi Haryono <mail.budiharyono@gmail.com>
+ * @since 019
+ */
+function mm_popup_menu()
+{
+    wp_nav_menu([
+        'theme_location' => 'popup-menu',
+        'menu_id' => 'popup-menu-list',
+        'item_class' => 'popup-menu-item',
+    ]);
+}
+
+
+
 
 /**
  * Function header menu

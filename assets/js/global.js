@@ -27,8 +27,42 @@ window.addEventListener('DOMContentLoaded', (event) => {
             mm_video_modal();
         } else if ($body.hasClass('home')) {
             mm_flickity_testimonial();
+        } else if ($body.hasClass('page-template-loker-page')) {
+            mm_loker_close_alert();
         }
         /*=========================Conditional script end=========================*/
+
+
+
+
+        /**
+        =========================
+        * Sticky Menu
+        *=========================
+        */
+        jQuery('#stmenu').slideUp();
+        //when page scroll down 100px from top, add class show to #stmenu.
+        jQuery(window).scroll(function () {
+            if (jQuery(this).scrollTop() > 300) {
+                jQuery('#stmenu').slideDown();
+            } else {
+                jQuery('#stmenu').slideUp();
+            }
+        });
+
+
+        /**
+        =========================
+        * Loker Close Alert
+        *=========================
+        */
+        function mm_loker_close_alert() {
+            jQuery('.loker-btn.loker-closed.show').click(function () {
+                alert('Maaf Lowongan kerja sudah ditutup.');
+            })
+        }
+
+
         /**
         =========================
         * Photo Gallery
@@ -74,6 +108,45 @@ window.addEventListener('DOMContentLoaded', (event) => {
                 autoPlay: true,
             });
         }
+
+
+
+        /**
+        =========================
+        * Popup Menu
+        *=========================
+        */
+        /*=========================Launch Popup Menu=========================*/
+        jQuery('#popup-menu-trigger-wr, #stmenu-trigger').click(function () {
+            var layer = jQuery('<div id="popmenu-layer"></div>');
+            jQuery('#popmenu').toggleClass('show');
+            jQuery('body').addClass('no-scroll');
+            jQuery('body').append(layer);
+            jQuery('#stmenu').slideUp();
+
+
+            jQuery('#popmenu-layer').click(function () {
+                jQuery('body').removeClass('no-scroll');
+                jQuery('#popmenu').removeClass('show');
+                jQuery('#popmenu-layer').remove();
+                jQuery('#stmenu').slideDown();
+            });
+
+
+
+
+        });
+
+        /*=========================Close Popup Menu=========================*/
+        jQuery('#popmenu-close, #popmenu').click(function () {
+            jQuery('body').removeClass('no-scroll');
+            jQuery('#popmenu').removeClass('show');
+            //remove layer from body
+            jQuery('#popmenu-layer').remove();
+            jQuery('#stmenu').slideDown();
+        });
+
+
 
 
 
