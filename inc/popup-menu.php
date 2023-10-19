@@ -15,7 +15,6 @@ defined('ABSPATH') || exit;
 <div id="popmenu">
     <div id="popmenu-wr">
         <div id="popmenu-close">X</div>
-
         <!-- pop menu logo wr -->
         <div id="popmenu-logo-wr" class="popmenu-row">
             <a href="/" title="Fajarmerah Group">
@@ -31,9 +30,9 @@ defined('ABSPATH') || exit;
 
         <!--pop menu cta -->
         <div id="popmenu-cta-wr" class="popmenu-row">
-            <div id="popmenu-wa-btn" class="popmenu-cta waform-trigger"><i class="fab fa-whatsapp"></i> Chat Dengan Kami</div>
-            <div id="popmenu-call-btn" class="popmenu-cta waform-trigger"><i class="fas fa-phone"></i> Hubungi Kami</div>
-            <div id="popmenu-email-btn" class="popmenu-cta waform-trigger"><i class="far fa-envelope"></i> Kirirm Email</div>
+            <div id="popmenu-wa-btn" class="popmenu-cta waform-trigger"><?php echo mm_icon_whatsapp(); ?> Chat Dengan Kami</div>
+            <div id="popmenu-call-btn" class="popmenu-cta waform-trigger"><?php echo mm_icon_phone(); ?> Hubungi Kami</div>
+            <div id="popmenu-email-btn" class="popmenu-cta waform-trigger"><?php echo mm_icon_envelope(); ?> Kirim Email</div>
         </div>
 
         <!-- pop menu menus -->

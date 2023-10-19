@@ -24,6 +24,7 @@ function mm_theme_version()
 }
 
 require get_template_directory() . '/assets/images/images.php';
+require get_template_directory() . '/assets/svg/svg.php';
 require get_template_directory() . '/assets/videos/video.php';
 
 
@@ -41,18 +42,13 @@ function mm_enqueue_styles()
 	// Load Normalize CSS.
 	wp_enqueue_style('mm-normalize', 'https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css', array(), '8.0.1', 'all');
 
-	// Load Font Awesome CSS.
-	wp_enqueue_style('mm-fontawesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css', array(), '6.2.0', 'all');
-
 	// Load Animate CSS.
 	wp_enqueue_style('mm-animate', 'https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css', array(), '4.1.1', 'all');
 
 	if (mm_is_devmode()) {
-		// Load your main style.css file.
-		wp_enqueue_style('mm-style', get_stylesheet_uri(), array('mm-normalize', 'mm-fontawesome', 'mm-animate'), $theme_version, 'all');
+		wp_enqueue_style('mm-style', get_stylesheet_uri(), array(), $theme_version, 'all');
 	} else {
-		// Load a minified version of your style.css.
-		wp_enqueue_style('mm-style', get_template_directory_uri() . '/style.min.css', array('mm-normalize', 'mm-fontawesome', 'mm-animate'), $theme_version, 'all');
+		wp_enqueue_style('mm-style', get_template_directory_uri() . '/style.min.css', array(), $theme_version, 'all');
 	}
 
 	if (is_front_page() || is_home()) {
@@ -61,6 +57,7 @@ function mm_enqueue_styles()
 	}
 }
 add_action('wp_enqueue_scripts', 'mm_enqueue_styles');
+
 
 
 

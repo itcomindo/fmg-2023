@@ -42,23 +42,23 @@ get_template_part('inc/popup-menu');
                     </li>
 
                     <li class="colist-item">
-                        <span class="colist-left"><i class="fa-regular fa-bookmark"></i></span>
+                        <span class="colist-left"><?php echo mm_icon_pin(); ?></span>
                         <span class="colist-right"><?php alamat_lengkap(); ?></span>
                     </li>
 
 
                     <li class="colist-item">
-                        <span class="colist-left"><i class="fa-solid fa-phone"></i></span>
+                        <span class="colist-left"><?php echo mm_icon_phone(); ?></span>
                         <span id="jqhp" class="colist-right jqnhp"><?php mm_the_phone('display'); ?></span>
                     </li>
 
                     <li class="colist-item">
-                        <span class="colist-left"><i class="fa-brands fa-whatsapp"></i></span>
+                        <span class="colist-left"><?php echo mm_icon_whatsapp(); ?></span>
                         <span class="colist-right"><?php mm_the_phone('display'); ?></span>
                     </li>
 
                     <li class="colist-item">
-                        <span class="colist-left"><i class="fa-regular fa-envelope"></i></span>
+                        <span class="colist-left"><?php echo mm_icon_envelope(); ?></span>
                         <span class="colist-right"><?php email_comp_mn(); ?></span>
                     </li>
 

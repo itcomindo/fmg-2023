@@ -36,9 +36,9 @@ function mm_wa_form()
                     <span id="waform-desc">Isi form dibawah ini sebelum memulai chat dengan kami 👌.</span>
                 </div>
                 <div id="waform-option-elements-wr" class="animate__animated">
-                    <div id="open-chat" class="waform-cta-element"><i class="fab fa-whatsapp"></i> Chat</div>
-                    <a id="ctacall" class="waform-link waform-cta-element" rel="noopener" target="_blank" href="tel:<?php mm_the_phone('phone') ?>"><i class="fas fa-phone"></i> Call</a>
-                    <a id="ctaemail" class="waform-link waform-cta-element" rel="noopener" target="_blank" href="mailto:<?php email_comp_mn(); ?>"><i class="far fa-envelope"></i> Email</a>
+                    <div id="open-chat" class="waform-cta-element">Chat</div>
+                    <a id="ctacall" class="waform-link waform-cta-element" rel="noopener" target="_blank" href="tel:<?php mm_the_phone('phone') ?>"> Call</a>
+                    <a id="ctaemail" class="waform-link waform-cta-element" rel="noopener" target="_blank" href="mailto:<?php email_comp_mn(); ?>"> Email</a>
                 </div>
             </div>
             <div id="waform-item-wr" <?php echo $loker; ?>>
@@ -71,7 +71,7 @@ function mm_wa_form()
                 </div>
                 <div id="tombol-kirim-pesan" class="waform-item" data-whatsapp="//api.whatsapp.com/send?phone=<?php mm_the_phone('whatsapp'); ?>">
                     <small id="btn-msg" class="accent-1">Silahkan Tekan tombol chat 🙏</small>
-                    <button id="waform-submit"><a href="#"><i class="fab fa-telegram"></i> Mulai Chat</a></button>
+                    <button id="waform-submit"><a href="#"> Mulai Chat</a></button>
                 </div>
             </div>
         </div>

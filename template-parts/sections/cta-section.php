@@ -26,19 +26,19 @@ defined('ABSPATH') || exit;
             </div>
             <div id="cta-item-wr" class="w100">
                 <div class="cta-item">
-                    <i class="fab fa-whatsapp"></i>
+                    <?php echo mm_icon_whatsapp(); ?>
                     <h3 class="cta-head">Chat</h3>
                     <div class="cta-btn cta-chat waform-trigger">Chat Dengan Kami</div>
                 </div>
 
                 <div class="cta-item">
-                    <i class="fas fa-phone"></i>
+                    <?php echo mm_icon_phone(); ?>
                     <h3 class="cta-head">Phone</h3>
                     <div class="cta-btn cta-call waform-trigger">Telepon Kami</div>
                 </div>
 
                 <div class="cta-item">
-                    <i class="far fa-envelope"></i>
+                    <?php echo mm_icon_envelope(); ?>
                     <h3 class="cta-head">Email</h3>
                     <div class="cta-btn cta-email waform-trigger">Kirim Email</div>
                 </div>

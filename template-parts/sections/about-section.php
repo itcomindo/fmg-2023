@@ -23,7 +23,7 @@ defined('ABSPATH') || exit;
 
                     <p class="about-text"><span class="atnum">3.</span> <span class="white bold">Kami sangat fokus pada efisiensi dan efektifitas tanpa mengurangi kualitas dan produktivitas</span> setiap tenaga kerja yang Kami tugaskan dilokasi area bisnis Anda.</p>
 
-                    <p class="about-text"><span class="atnum">4.</span> <span class="white bold">Kami sangat memahami ekspektasi yang Anda targetkan,</span> konsultasikan segala kebutuhan Anda bersama Kami, segera hubungi layanan pelanggan Kami diwaktu yang paling nyaman yang Anda miliki melalui: <span class="cta-wr"><a href="https://api.whatsapp.com/send?phone=<?php mm_the_phone('whatsapp'); ?>" class="cta-phone-chat-mn chat"><i class="fab fa-whatsapp"></i> <?php mm_the_phone('display'); ?></a><a href="tel:<?php mm_the_phone('phone'); ?>" class="cta-phone-chat-mn phone"><i class="fa-solid fa-phone"></i> <?php mm_the_phone('display'); ?></a></span></p>
+                    <p class="about-text"><span class="atnum">4.</span> <span class="white bold">Kami sangat memahami ekspektasi yang Anda targetkan,</span> konsultasikan segala kebutuhan Anda bersama Kami, segera hubungi layanan pelanggan Kami diwaktu yang paling nyaman yang Anda miliki melalui: <span class="cta-wr"><a href="https://api.whatsapp.com/send?phone=<?php mm_the_phone('whatsapp'); ?>" class="cta-phone-chat-mn chat"> <?php mm_the_phone('display'); ?></a><a href="tel:<?php mm_the_phone('phone'); ?>" class="cta-phone-chat-mn phone"> <?php mm_the_phone('display'); ?></a></span></p>
                 </div>
             </div>
             <div id="about-right" class="w100">

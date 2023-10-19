@@ -75,6 +75,11 @@ function mah($html_tags_allowed = array())
 		'enable-background' => true,
 		'xml:space'         => true,
 		'metadata'          => true,
+		'fill' 				=> true,
+		'style' 			=> true,
+		'path' 				=> true,
+		'd' 				=> true,
+
 	);
 
 	foreach ($html_tags_allowed as $tag) {

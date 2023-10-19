@@ -9,6 +9,7 @@
  */
 
 defined('ABSPATH') || exit;
+$pass = array('svg', 'img');
 ?>
 
 <section id="services" class="section os-pr">
@@ -35,19 +36,19 @@ defined('ABSPATH') || exit;
                 <div id="services-card-wr" class="osbottom-cards">
                     <!-- call complex fields bidker Satpam -->
                     <div class="service-card">
-                        <i class="fa-solid fa-award"></i>
+                        <?php echo mm_icon_throphy(); ?>
                         <h4 class="osbottom-card-head">Pelatihan Security</h4>
                         <p class="osbottom-card-text">Menyediakan fasilitas pelatihan berikut dengan mentor (staff) pengajar dari instutusi berwenang yang sangat berkompeten di industri keamanan.</p>
                         <a class="btn-style-one" href="/pelatihan-security/">Selengkapnya</a>
                     </div>
                     <div class="service-card">
-                        <i class="fa-solid fa-building-shield"></i>
+                        <?php echo mm_icon_shield(); ?>
                         <h4 class="osbottom-card-head">Jasa Security</h4>
                         <p class="osbottom-card-text">Menyediakan tenaga kerja yang memiliki kemampuan dan keahlian yang sesuai di area satuan pengamanan dan pengaamanan berbagai property/event.</p>
                         <a class="btn-style-one" href="/jasa-security/">Selengkapnya</a>
                     </div>
                     <div class="service-card">
-                        <i class="fa-solid fa-people-roof"></i>
+                        <?php echo mm_icon_chart(); ?>
                         <h4 class="osbottom-card-head">Outsourcing Security</h4>
                         <p class="osbottom-card-text">Menyediakan layanan outsourcing security satuan pengamanan (satpam) terlatih, terdidik dan berpengalaman keseluruh Indonesia.</p>
                         <a class="btn-style-one" href="/outsourcing-security/">Selengkapnya</a>
@@ -72,7 +73,8 @@ defined('ABSPATH') || exit;
                                         <p>Menyediakan staff yang jujur, baik dalaam attitude, terlatih, berdedicated tinggi untuk menjadi tenaga keamanan di rumah tinggal.</p>
                                     </div>
                                     <div class="tl-left-content-right">
-                                        <i class="fa-solid fa-house-lock"></i>
+                                        <!-- <i class="fa-solid fa-house-lock"></i> -->
+                                        <?php echo mm_icon_home(); ?>
                                     </div>
                                 </div>
                             </div>
@@ -86,7 +88,8 @@ defined('ABSPATH') || exit;
                                             tinggi untuk menjadi tenaga keamanan di gedung bisnis.</p>
                                     </div>
                                     <div class="tl-left-content-right">
-                                        <i class="fa-solid fa-building-lock"></i>
+                                        <!-- <i class="fa-solid fa-building-lock"></i> -->
+                                        <?php echo mm_icon_building(); ?>
                                     </div>
                                 </div>
                             </div>
@@ -100,7 +103,7 @@ defined('ABSPATH') || exit;
                                             kebakaran atau peristiwa emergency lainnya.</p>
                                     </div>
                                     <div class="tl-left-content-right">
-                                        <i class="fa-solid fa-fire-extinguisher"></i>
+                                        <?php echo mm_icon_fire(); ?>
                                     </div>
                                 </div>
                             </div>
@@ -124,7 +127,7 @@ defined('ABSPATH') || exit;
                                             sistem pengamanan pada aset pelanggan.</p>
                                     </div>
                                     <div class="tl-right-content-right">
-                                        <i class="fa-solid fa-briefcase"></i>
+                                        <?php echo mm_icon_bag(); ?>
                                     </div>
                                 </div>
                             </div>
@@ -138,7 +141,7 @@ defined('ABSPATH') || exit;
                                             pengawal pribadi anda dan keluarga.</p>
                                     </div>
                                     <div class="tl-right-content-right">
-                                        <i class="fa-solid fa-users-gear"></i>
+                                        <?php echo mm_icon_persoal_guard(); ?>
                                     </div>
                                 </div>
                             </div>
@@ -152,7 +155,7 @@ defined('ABSPATH') || exit;
                                             menjamin tetap berjalannya operasi perusahaan anda.</p>
                                     </div>
                                     <div class="tl-right-content-right">
-                                        <i class="fa-solid fa-people-group"></i>
+                                        <?php echo mm_icon_bug(); ?>
                                     </div>
                                 </div>
                             </div>

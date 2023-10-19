@@ -9,7 +9,7 @@
  */
 
 defined('ABSPATH') || exit;
-
+$pass = array('svg', 'img');
 
 ?>
 
@@ -31,7 +31,7 @@ defined('ABSPATH') || exit;
 				<span class="show-on-large"><?php nama_comp_mn(); ?></span>
 				<span class="show-on-small">PT. FISS</span>
 			</div>
-			<div id="tb-right"><i class="fab fa-whatsapp"></i> <i class="fas fa-phone"></i><?php hp_comp_mn(); ?></div>
+			<div id="tb-right"><?php echo wp_kses(mm_icon_whatsapp('ffffff'), mah($pass)); ?><?php echo wp_kses(mm_icon_phone('ffffff'), mah($pass)); ?> <?php hp_comp_mn(); ?></div>
 		</div>
 	</div>
 </div>
@@ -62,7 +62,8 @@ defined('ABSPATH') || exit;
 		<div id="header-menu-wr">
 			<?php mm_header_menu(); ?>
 			<div id="popup-menu-trigger-wr">
-				<i class="fas fa-bars"></i>
+				<!-- <i class="fas fa-bars"></i> -->
+				<?php echo mm_icon_bars(); ?>
 			</div>
 		</div>
 	</div>
