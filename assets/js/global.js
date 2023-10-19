@@ -27,13 +27,10 @@ window.addEventListener('DOMContentLoaded', (event) => {
             mm_video_modal();
         } else if ($body.hasClass('home')) {
             mm_flickity_testimonial();
-            mm_image_size_detector();
         } else if ($body.hasClass('page-template-loker-page')) {
             mm_loker_close_alert();
         }
         /*=========================Conditional script end=========================*/
-
-
 
 
         /**
@@ -300,50 +297,6 @@ window.addEventListener('DOMContentLoaded', (event) => {
                 e.preventDefault();
             }
         });
-
-
-
-
-        /**
-        =========================
-        * image size detetor for rekanan
-        *=========================
-        */
-        function mm_image_size_detector() {
-
-            function getScreenWidth() {
-                return jQuery(window).width();
-            }
-
-            // Fungsi untuk menambahkan atribut width dan height pada gambar
-            function setImgDimensions() {
-                var screenWidth = getScreenWidth();
-
-                // Loop melalui setiap elemen gambar dengan kelas .rekanan-img
-                jQuery('.rekanan-img, .testi-logo').each(function () {
-                    var $img = jQuery(this);
-
-                    // Mendapatkan URL gambar
-                    var imgSrc = $img.attr('src');
-
-                    // Buat objek gambar baru untuk menghitung ukuran asli
-                    var tempImg = new Image();
-                    tempImg.src = imgSrc;
-
-                    // Set atribut width dan height sesuai dengan ukuran asli gambar
-                    $img.attr('width', tempImg.width);
-                    $img.attr('height', tempImg.height);
-                });
-            }
-
-            // Panggil fungsi setImgDimensions saat halaman dimuat dan saat ukuran layar berubah
-            setImgDimensions();
-            jQuery(window).on('resize', setImgDimensions);
-
-
-
-        }
-
 
 
 
