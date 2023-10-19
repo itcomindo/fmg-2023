@@ -30,10 +30,10 @@ if (is_tag()) {
         'posts_per_page' => 10,
     ]);
 } else {
-    $args = ([
-        'post_type' => 'post',
-        'posts_per_page' => 10,
-    ]);
+    // $args = ([
+    //     'post_type' => 'post',
+    //     'posts_per_page' => 10,
+    // ]);
 }
 
 $query = new WP_Query($args);

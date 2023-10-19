@@ -16,8 +16,11 @@ defined('ABSPATH') || exit;
 ?>
 
 <section id="hero" class="section">
-	<img width="150" height="150" id="hero-mobile-logo" src="<?php echo LOGO; ?>" alt="">
-	<i id="hero-overlay"></i>
+	<div id="hero-image-wr" class="section">
+		<img width="1920" height="571" src="<?php echo IMAGES_DIR . 'mobil_patroli.webp'; ?>" alt="Outsourcing Security">
+	</div>
+	<img width="150" height="150" id="hero-mobile-logo" src="<?php echo LOGO; ?>" alt="Outsourcing Security">
+	<!-- <i id="hero-overlay"></i> -->
 	<div class="container">
 		<div id="hero-wr">
 			<div id="hero-left" class="hero-col">

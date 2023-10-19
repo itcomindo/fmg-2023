@@ -22,7 +22,7 @@ defined('ABSPATH') || exit;
                     </div>
                 </div>
                 <h2 class="ostop-head section-head-medium red">Our Services</h2>
-                <p>PT. Fajarmerah Group bersedia untuk menyalurkan pekerja bersistem outsourcing keseluruh Indonesia. Bidang pekerjaan yang kami sediakan antara lain:</p>
+                <span>PT. Fajarmerah Group bersedia untuk menyalurkan pekerja bersistem outsourcing keseluruh Indonesia. Bidang pekerjaan yang kami sediakan antara lain:</span>
             </div>
             <!-- service bottom -->
             <div class="os-bottom">

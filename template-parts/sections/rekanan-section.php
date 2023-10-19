@@ -29,7 +29,7 @@ function mm_ambil_gambar_rekanan()
             $file_url = content_url('/uploads/rekanan/' . basename($file));
 
             $output .= '<div class="rekanan-item">';
-            $output .= '<img width="96" height="36" class="rekanan-img" src="' . esc_url($file_url) . '" alt="client perusahaan outsourcing PT. FMG ke ' . $x . ' " title="client perusahaan outsourcing PT. FMG ke ' . $x . ' ">';
+            $output .= '<img class="rekanan-img" src="' . esc_url($file_url) . '" alt="client perusahaan outsourcing PT. FMG ke ' . $x . ' " title="client perusahaan outsourcing PT. FMG ke ' . $x . ' ">';
             $output .= '</div>';
         }
     }
