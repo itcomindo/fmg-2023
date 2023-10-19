@@ -15,7 +15,8 @@ defined('ABSPATH') || exit;
 
 ?>
 
-<section id="hero" class="section" style="background: url(<?php echo $bgimg; ?>); background-size: cover; background-position: center; background-repeat: no-repeat; background-attachment: fixed;">
+<section id="hero" class="section">
+	<i id="hero-overlay"></i>
 	<div class="container">
 		<div id="hero-wr">
 			<div id="hero-left" class="hero-col">

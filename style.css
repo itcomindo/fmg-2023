@@ -3,7 +3,7 @@
 * Theme Name: Fajarmerah Group
 * Theme URI: https://fajarmerahgroup.com
 * Description: Fajarmerah Group
-* Version: 5
+* Version: 7
 *=========================
 */
 
@@ -605,8 +605,19 @@ h2#logo-header {
   border-bottom: 6px solid silver;
   color: var(--color-light-1);
   background-attachment: fixed;
+  padding-left: 0;
+  padding-right: 0;
 }
-
+#hero-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-dark-3);
+  z-index: 1;
+  opacity: 0.7;
+  top: 0;
+  left: 0;
+}
 #hero:after {
   content: "";
   width: 100%;
@@ -614,7 +625,12 @@ h2#logo-header {
   position: absolute;
   top: 0;
   left: 0;
-  background-color: var(--transparent-dark-6);
+  background: black;
+  background-image: url(/wp-content/themes/fajarmerah-group/assets/images/mobil-patroli.webp);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 #hero:before {
@@ -664,6 +680,8 @@ h2#logo-header {
 
 #hero .container {
   height: 100%;
+  padding-right: 1rem;
+  padding-left: 1rem;
   z-index: 2;
 }
 
@@ -1669,6 +1687,208 @@ iframe.video-modal-iframe {
 
 /**
 =========================
+* Single and Page
+*=========================
+*/
+
+#jp {
+  margin-top: 0.25rem;
+  background: linear-gradient(
+    to bottom,
+    var(--color-red-dark),
+    var(--color-red-darkest)
+  );
+  color: var(--color-light-1);
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+/**
+=========================
+* Lahan Pelatihan Satpam Page
+*=========================
+*/
+
+#sewa {
+  padding-top: 3rem;
+  padding-bottom: 9rem;
+  background: linear-gradient(
+    to right,
+    var(--color-red-dark),
+    var(--color-red-darkest),
+    var(--color-red-dark)
+  );
+  color: var(--color-light-1);
+  z-index: 2;
+}
+
+#sewa-hero {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  gap: 1rem;
+}
+
+#sewa-hero-left,
+#sewa-hero-right {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#sewa-hero-right {
+  background-color: black;
+  aspect-ratio: 16/9;
+  overflow: hidden;
+}
+#sewa-hero-right video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+#sewa-content {
+  padding-bottom: 5rem;
+  background-color: var(--color-light-2);
+}
+
+#sewa-content-wr {
+  background-color: var(--color-light-1);
+  width: 768px;
+  max-width: 100%;
+  margin: -5rem auto 0 auto;
+  padding: 2rem 1rem;
+  z-index: 3;
+}
+
+/**
+=========================
+* Loker Page
+*=========================
+*/
+
+#loker {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+.loker-closed.hide,
+.loker-open.hide {
+  display: none;
+}
+
+#loker-item-wr {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.loker-item {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid var(--transparent-dark-1);
+  box-shadow: 0 0 0.5rem var(--transparent-dark-4);
+  background-color: var(--color-red-darkest);
+}
+.loker-date {
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+  font-size: 75%;
+  line-height: 1.3;
+  z-index: 2;
+  background-color: var(--transparent-dark-6);
+  color: var(--color-light-1);
+  padding: 3px;
+}
+.loker-item-top {
+  width: 100%;
+  background-color: var(--color-accent-1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.loker-item-bot {
+  padding: 1.5rem 1rem;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(
+    to bottom,
+    var(--color-red-dark),
+    var(--color-red-darkest)
+  );
+  color: var(--color-light-1);
+}
+.loker-item-bot h3 {
+  font-size: 1rem;
+  text-align: center;
+}
+.loker-btn {
+  margin: 0 auto;
+  width: max-content;
+  border: 1px solid var(--transparent-light-4);
+  font-size: 90%;
+  line-height: 1.3;
+  padding: 6px 12px;
+  border-radius: 5px;
+}
+#lcp-list-wr {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.lcp-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.lcp-list-phone,
+.lcp-list-whatsapp {
+  width: calc(100% / 2 - 2rem);
+  display: flex;
+  flex-direction: column;
+  padding: 5px 12px;
+  border: 1px solid var(--transparent-dark-3);
+  border-radius: 5px;
+  box-shadow: 0 0 0.25rem var(--transparent-dark-2);
+}
+
+.lcp-list-phone a,
+.lcp-list-whatsapp a {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.lcp-list-phone {
+  background: linear-gradient(
+    to bottom,
+    var(--color-red-dark),
+    var(--color-red-darkest)
+  );
+  color: white;
+}
+
+.lcp-list-whatsapp {
+  background: linear-gradient(to bottom, green, darkgreen);
+  color: white;
+}
+
+.lcp-list-phone a i,
+.lcp-list-whatsapp a i {
+  margin-right: 6px;
+}
+
+/**
+=========================
 * Footer
 * @todo footer
 *=========================
@@ -2278,6 +2498,18 @@ blockquote.testi-content {
 
 /**
 =========================
+* 992px
+* @todo 992px media query single.css
+*=========================
+*/
+@media screen and (max-width: 992px) {
+  #loker-item-wr {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/**
+=========================
 * 801px
 * @todo 801px
 *=========================
@@ -2414,8 +2646,18 @@ blockquote.testi-content {
   .kc-wr {
     grid-template-columns: repeat(2, 1fr);
   }
+  .lcp-list-phone,
+  .lcp-list-whatsapp {
+    width: 100%;
+  }
 }
 
+/**
+=========================
+* 715px
+* @todo 715px
+*=========================
+*/
 @media screen and (max-width: 715px) {
   #hero {
     padding-right: 0;
@@ -2526,6 +2768,21 @@ blockquote.testi-content {
 
 /**
 =========================
+* 571px
+* @todo 571px media query single.css
+*=========================
+*/
+@media screen and (max-width: 571px) {
+  #sewa-hero {
+    grid-template-columns: 1fr;
+  }
+  #loker-item-wr {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/**
+=========================
 * 481px
 * @todo 481px
 *=========================
@@ -2591,6 +2848,18 @@ blockquote.testi-content {
   }
   .testi-item {
     width: calc(100% - 1rem);
+  }
+}
+
+/**
+=========================
+* 394px
+* @todo 394px media query single.css
+*=========================
+*/
+@media screen and (max-width: 394px) {
+  #loker-item-wr {
+    grid-template-columns: 1fr;
   }
 }
 

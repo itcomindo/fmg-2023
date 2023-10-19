@@ -109,7 +109,7 @@ defined('ABSPATH') || exit;
                         <!-- Top Level Middle -->
                         <div class="toplevel-mid toplevel-col">
                             <span class="logo-large animate__animated">
-                                <img src="https://fajarmerahgroup.com/wp-content/themes/fmg/images/fmg-200.webp" alt="PT. Fajarmerah Indo Service" title="PT. Fajarmerah Indo Service" width="200" height="200">
+                                <img src="<?php echo LOGO; ?>" alt="PT. Fajarmerah Indo Service" title="PT. Fajarmerah Indo Service" width="200" height="200">
                             </span>
                             <h3>PT. Fajarmerah Group Tersedia Diseluruh Indonesia</h3>
                         </div>
