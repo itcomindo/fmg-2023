@@ -59,10 +59,6 @@ window.addEventListener('DOMContentLoaded', (event) => {
         });
 
 
-
-
-
-
         /**
         =========================
         * Loker Close Alert
@@ -149,7 +145,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
         *=========================
         */
         /*=========================Launch Popup Menu=========================*/
-        jQuery('#popup-menu-trigger-wr, #stmenu-trigger').click(function () {
+        jQuery('#popup-menu-trigger-wr, #stmenu-trigger, #flonav').click(function () {
             var layer = jQuery('<div id="popmenu-layer"></div>');
             jQuery('#popmenu').toggleClass('show');
             jQuery('body').addClass('no-scroll');

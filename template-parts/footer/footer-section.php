@@ -89,6 +89,6 @@ get_template_part('inc/popup-menu');
     </div>
 </div>
 
-<div id="flonav" class="waform-trigger">
+<div id="flonav">
     <div id="flonav-wr"><?php echo mm_icon_bars(); ?> <span id="flonav-text">Menu</span></div>
 </div>

@@ -40,7 +40,7 @@ function mm_enqueue_styles()
 	$theme_version = wp_get_theme()->get('Version');
 
 	// Load Animate CSS.
-	wp_enqueue_style('mm-animate', 'https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css', array(), '4.1.1', 'all');
+	// wp_enqueue_style('mm-animate', 'https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css', array(), '4.1.1', 'all');
 
 	if (mm_is_devmode()) {
 		wp_enqueue_style('mm-style', get_stylesheet_uri(), array(), $theme_version, 'all');
