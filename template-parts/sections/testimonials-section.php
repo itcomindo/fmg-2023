@@ -16,7 +16,7 @@ defined('ABSPATH') || exit;
     <div class="container">
         <div id="testi-wr">
             <div id="testi-top">
-                <h2 class="section-head-medium">Testimonials</h2>
+                <h2 class="section-head-medium red">Testimonials</h2>
                 <p>Fajarmerah Group senantiasa untuk terus dan secara konsisten meningkatkan performa para staff serta berinovasi untuk memberikan pelayanan yang sesuai dengan eksptektasi para customer kami.</p>
             </div>
 

@@ -15,7 +15,7 @@ defined('ABSPATH') || exit;
     <div class="container">
         <div id="about-wr" class="w100">
             <div id="about-left" class="w100">
-                <h2 class="section-head font-display">Tentang PT. FMG</h2>
+                <h2 class="section-head-medium color-light">Tentang PT. FMG</h2>
                 <div class="about-text-wr w100">
                     <p class="about-text"><span class="atnum">1.</span> PT. Fajarmerah Indoservice perusahaan outsourcing besar &amp; mapan di Indonesia. <span class="white bold">Kami menyediakan tenaga kerja dengan attitude dan mental yang baik, terdidik, terlatih, berpengalaman dan bersemangat untuk bekerja dan ditempatkan diseluruh Indonesia.</span></p>
 

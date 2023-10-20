@@ -39,9 +39,6 @@ function mm_enqueue_styles()
 {
 	$theme_version = wp_get_theme()->get('Version');
 
-	// Load Normalize CSS.
-	wp_enqueue_style('mm-normalize', 'https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css', array(), '8.0.1', 'all');
-
 	// Load Animate CSS.
 	wp_enqueue_style('mm-animate', 'https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css', array(), '4.1.1', 'all');
 
@@ -53,7 +50,8 @@ function mm_enqueue_styles()
 
 	if (is_front_page() || is_home()) {
 		// Load Flickity CSS on the front page or home page only.
-		wp_enqueue_style('mm-flickity-css', 'https://unpkg.com/flickity@2/dist/flickity.min.css', array(), '2.2.2', 'all');
+		// wp_enqueue_style('mm-flickity-css', 'https://unpkg.com/flickity@2.3.0/dist/flickity.min.css', array(), '2.3.0', 'all');
+		wp_enqueue_style('mm-flickity-css', get_template_directory_uri() . '/assets/css/flickity.min.css', array(), $theme_version, 'all');
 	}
 }
 add_action('wp_enqueue_scripts', 'mm_enqueue_styles');
@@ -78,7 +76,8 @@ function mm_load_scripts()
 
 	if (is_front_page()) {
 		// Enqueue Flickity JS only on the front page.
-		wp_enqueue_script('mm-flickity-js', 'https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js', array(), '2.2.2', true);
+		// wp_enqueue_script('mm-flickity-js', 'https://unpkg.com/flickity@2.3.0/dist/flickity.pkgd.min.js', array(), '2.3.0', true);
+		wp_enqueue_script('mm-flickity-js', get_template_directory_uri() . '/assets/js/flickity.pkgd.min.js', array(), '2.3.0', true);
 	}
 
 	if (mm_is_devmode()) {

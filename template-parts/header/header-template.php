@@ -53,7 +53,7 @@ $pass = array('svg', 'img');
 				</a>
 				<h2 id="logo-header">Fajarmerah Group</h2>
 			</div>
-			<div id="header-right" class="header-col">Legal & Certified</div>
+			<div id="header-right" class="header-col h100">Legal & Certified</div>
 		</div>
 	</div>
 </header>

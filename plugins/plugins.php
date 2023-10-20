@@ -53,3 +53,34 @@ add_action('wp_body_open', function () {
 <?php
     }
 });
+
+
+function cwpai_get_posts_from_editors_with_acf()
+{
+    // Get users with the role 'editor'
+    $users = get_users(array('role' => 'editor'));
+    $user_ids = array();
+
+    // Extract user IDs
+    foreach ($users as $user) {
+        $user_ids[] = $user->ID;
+    }
+
+    // Query parameters
+    $args = array(
+        'post_type' => 'post',
+        'author__in' => $user_ids, // Only get posts authored by editors
+        'posts_per_page' => 5, // Limit to 5 posts per user
+        'meta_query' => array(
+            array(
+                'key' => 'aktif', // ACF field name
+                'value' => '1', // ACF field value
+                'compare' => '=='
+            )
+        )
+    );
+
+    // The Query
+    $query = new WP_Query($args);
+    return $query;
+}

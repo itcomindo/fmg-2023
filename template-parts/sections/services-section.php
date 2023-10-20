@@ -165,7 +165,7 @@ $pass = array('svg', 'img');
                 </div>
                 <!-- bidang kerja lainnya start -->
                 <div class="bidker-lainnya-wr">
-                    <h3 class="osbottom-head headlevel-medium has-skew-red">Bidang Pekerjaan Selengkapnya</h3>
+                    <h3 class="section-head-medium red">Bidang Pekerjaan Selengkapnya</h3>
                     <p class="osbottom-card-subhead">Melakukan rekrutmen, pelatihan (pendidikan), menyalurkan pekerja
                         untuk pekerja bekerja di area atau bidang kerja sbb:</p>
                     <div class="bidker-lainnya">

@@ -1,4 +1,9 @@
 window.addEventListener('DOMContentLoaded', (event) => {
+
+
+
+
+
     /**
     =========================
     * Vanilla js start from here
@@ -41,14 +46,21 @@ window.addEventListener('DOMContentLoaded', (event) => {
         *=========================
         */
         jQuery('#stmenu').slideUp();
+        jQuery('#flonav').slideUp();
         //when page scroll down 100px from top, add class show to #stmenu.
         jQuery(window).scroll(function () {
             if (jQuery(this).scrollTop() > 300) {
                 jQuery('#stmenu').slideDown();
+                jQuery('#flonav').slideDown();
             } else {
                 jQuery('#stmenu').slideUp();
+                jQuery('#flonav').slideUp();
             }
         });
+
+
+
+
 
 
         /**
@@ -165,11 +177,6 @@ window.addEventListener('DOMContentLoaded', (event) => {
             jQuery('#popmenu-layer').remove();
             jQuery('#stmenu').slideDown();
         });
-
-
-
-
-
 
 
 
