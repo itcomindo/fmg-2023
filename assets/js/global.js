@@ -151,6 +151,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
             jQuery('body').addClass('no-scroll');
             jQuery('body').append(layer);
             jQuery('#stmenu').slideUp();
+            jQuery('#flonav').hide();
 
 
             jQuery('#popmenu-layer').click(function () {
@@ -158,6 +159,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
                 jQuery('#popmenu').removeClass('show');
                 jQuery('#popmenu-layer').remove();
                 jQuery('#stmenu').slideDown();
+                jQuery('#flonav').show();
             });
 
 
@@ -355,6 +357,50 @@ window.addEventListener('DOMContentLoaded', (event) => {
             // Panggil fungsi setImgDimensions saat halaman dimuat dan saat ukuran layar berubah
             setImgDimensions();
             jQuery(window).on('resize', setImgDimensions);
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+        /**
+        =========================
+        * Special Event
+        *=========================
+        */
+        mm_special_event();
+        function mm_special_event() {
+            var $eventPopup = jQuery('.event-popup');
+            var $eventFloatingBottom = jQuery('.event-floatingbottom');
+
+            setTimeout(function () {
+                jQuery($eventPopup).addClass('show');
+            }, 5000);
+
+            setTimeout(function () {
+                jQuery($eventFloatingBottom).addClass('show');
+            }, 2000);
+
+
+
+
+
+            $eventPopup.on('click', function () {
+                $eventPopup.remove();
+            });
+
+            $eventFloatingBottom.on('click', function () {
+                $eventFloatingBottom.remove();
+            });
+
+
         }
 
 

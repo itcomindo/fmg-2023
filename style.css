@@ -3,7 +3,7 @@
 * Theme Name: Fajarmerah Group
 * Theme URI: https://fajarmerahgroup.com
 * Description: Fajarmerah Group
-* Version: 10
+* Version: 11
 *=========================
 */
 @import url("https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400;500;600;700&family=Rajdhani:wght@300;500;600;700&display=swap");
@@ -547,6 +547,9 @@ a.linkedin {
 }
 .color-accent-1 {
   color: var(--color-accent-1);
+}
+.hide {
+  display: none !important;
 }
 /**
 =========================
@@ -1991,10 +1994,17 @@ iframe.video-modal-iframe {
 }
 .loker-item-top {
   width: 100%;
+  aspect-ratio: 1/1;
   background-color: var(--color-accent-1);
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 0.5rem;
+}
+.loker-item-top img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 .loker-item-bot {
   padding: 1.5rem 1rem;
@@ -2062,6 +2072,115 @@ iframe.video-modal-iframe {
 .lcp-list-phone a i,
 .lcp-list-whatsapp a i {
   margin-right: 6px;
+}
+
+/**
+=========================
+* Special Event
+*@todo special event style.css
+*=========================
+*/
+.event-popup {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background: var(--transparent-dark-7);
+  z-index: 5555;
+  top: 0;
+  left: 0;
+  color: white;
+  transform: translateY(100%);
+}
+
+.event-popup.show {
+  transform: translateY(0);
+  transition: all 0.3s ease-in-out;
+}
+
+.event-wr.popup {
+  width: 295px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  background-color: black;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 2px;
+  transform: translate(-50%, -50%);
+}
+.close-event {
+  position: absolute;
+  top: -1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--color-red-dark);
+  color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  z-index: 2;
+}
+.image-event-wr {
+  width: 100%;
+  overflow: hidden;
+  padding: 2px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+.image-event-wr a {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.image-event-wr img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.url-event-wr {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-color: var(--transparent-dark-8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+.url-event-wr a {
+  background-color: darkred;
+  color: white;
+  width: max-content;
+  padding: 4px 16px;
+}
+
+.event-floatingbottom {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  width: 300px;
+  margin-left: -34.375rem;
+  z-index: 555;
+  transform: translateY(100%);
+}
+.event-floatingbottom.show {
+  transform: translateY(0);
+  transition: all 0.3s ease-in-out;
+}
+.event-wr.floatingbottom {
+  width: 100%;
+  height: auto;
 }
 /**
 =========================
@@ -2636,13 +2755,7 @@ blockquote.testi-content {
 * @todo animate.css
 *=========================
 */
-@charset "UTF-8"; /*!
- * animate.css - https://animate.style/
- * Version - 4.1.1
- * Licensed under the MIT license - http://opensource.org/licenses/MIT
- *
- * Copyright (c) 2020 Animate.css
- */
+
 :root {
   --animate-duration: 1s;
   --animate-delay: 1s;
@@ -6720,13 +6833,27 @@ blockquote.testi-content {
 /**
 =========================
 * Media Query
-* @todo media query
+* @todo media query start
 *=========================
 */
+
+/**
+=========================
+* 1110px
+* @todo 1110px style.css
+*=========================
+*/
+@media screen and (max-width: 1110px) {
+  .event-floatingbottom {
+    left: 1rem;
+    margin-left: 0;
+  }
+}
+
 /**
 =========================
 * 995px
-* @todo 995px
+* @todo 995px style.css
 *=========================
 */
 @media screen and (max-width: 995px) {

@@ -241,6 +241,32 @@ function theme_options_mn()
 
 			)
 		);
+
+
+	Container::make('theme_options', 'Special Event')
+		->set_page_parent($option_container)
+		->add_fields([
+			Field::make('complex', 'the_events', 'Events')
+				->set_layout('tabbed-horizontal')
+				->add_fields([
+					Field::make('checkbox', 'enable_event', 'Enable Event')
+						->set_option_value('yes'),
+					Field::make('select', 'what_event', 'What Event')
+						->set_options([
+							'loker' => 'Loker',
+							'pelatihan' => 'Pelatihan',
+						]),
+					Field::make('image', 'image_event', 'Image or Poster Event')
+						->set_value_type('url'),
+					Field::make('text', 'url_event', 'URL Event'),
+					Field::make('date', 'end_event', 'End Event Date'),
+					Field::make('select', 'how_show_event', 'How Show Event')
+						->set_options([
+							'popup' => 'Popup',
+							'floatingbottom' => 'Floating Bottom',
+						]),
+				])
+		]);
 }
 
 
